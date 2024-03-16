@@ -30,7 +30,7 @@ Bengaluru, Karnataka | +91 8688370485 | bhanu93@live.com
 - Electronics Cooling
 
 ## WORK EXPERIENCE
-### Sr. Simulation Engineer (Structural) September 2017-Present
+### Sr. Simulation Engineer (Structural) September 2017-2021
 **CADFEM India (ANSYS Elite Channel Partner), Hyderabad, India**
 - Regularly interacting with product development team and updating the weekly improvement of the project to provide CAE support to validate the designs.
 - Understanding client requirements, work scope and translating the actual problem to FEA.

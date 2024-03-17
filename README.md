@@ -30,6 +30,20 @@ Bengaluru, Karnataka | +91 8688370485 | bhanu93@live.com
 - Electronics Cooling
 
 ## WORK EXPERIENCE
+
+### Staff CAE Engineer September 2023-Present
+**Stryker India , Bengaluru, India**
+- Responsible for providing best in class modeling and simulation driven insights to medical device portfolio projects to
+reduce development costs, bring products to market faster and accelerate innovation.
+- Providing Thermal management solutions for Electronics consoles and medical devices by using CFD tools such as ICEPAK and Fluent FEA tools such as ANSYS Mechanical.
+
+### Senior CAE Engineer September 2021-2023
+**Stryker India , Bengaluru, India**
+- Collaborating with different Orthopedics R&D teams for the development of Plug and Play Micromotion model to quantify Glenoid loosening of implant using advanced techniques such as particle-based methods.
+- Responsible for development of FEA validation method using DIC (Digital Image Correlation) for Implant micromotion.
+- Engaging with Orthopedics team for Insilco clinical trials for remodeling of bone predication using statistical population data.
+- Collaboratied with Joint & Replacement division for the material characterization of complex material like UHMWPE.
+
 ### Sr. Simulation Engineer (Structural) September 2017-2021
 **CADFEM India (ANSYS Elite Channel Partner), Hyderabad, India**
 - Regularly interacting with product development team and updating the weekly improvement of the project to provide CAE support to validate the designs.

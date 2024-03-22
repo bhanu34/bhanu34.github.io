@@ -33,9 +33,9 @@ Bengaluru, Karnataka | +91 8688370485 | bhanu93@live.com
 
 ### Staff CAE Engineer September 2023-Present
 **Stryker India , Bengaluru, India**
-- Responsible for providing best in class modeling and simulation driven insights to medical device portfolio projects to
-reduce development costs, bring products to market faster and accelerate innovation.
-- Providing Thermal management solutions for Electronics consoles and medical devices by using CFD tools such as ICEPAK and Fluent FEA tools such as ANSYS Mechanical.
+- Responsible for providing best in class modeling and simulation driven insights to medical device portfolio projects to reduce development costs, bring products to market faster and accelerate innovation.
+- Providing Thermal management solutions for Electronics consoles and medical devices by using CFD tools such as ICEPAK and Fluent & FEA tools such as ANSYS Mechanical.
+- Resposible for providing fast and accurate life predictions for medical electronic hardware early in the design process using reliability physics approach.
 
 ### Senior CAE Engineer September 2021-2023
 **Stryker India , Bengaluru, India**

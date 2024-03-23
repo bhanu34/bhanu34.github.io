@@ -55,25 +55,13 @@ Bengaluru, Karnataka | +91 8688370485 | bhanu93@live.com
 - Keeping modernized with new technologies and methodologies and undergo training for better productivity.
 
 #### Customer: Alcon (Novartis Division), USA
-- Responsible for direct interaction with the product development team for the development of various eye surgical modules.
-- Performed coupled field Thermal-Electric, Structural-Thermal analysis for Next Generation Phaco Vitrecomy cassette module.
-- Performed Multi-physics Electric-Thermal-Structural based reliability analysis for the PCB assembly of the Light saber module.
-- Experienced in using Shape Memory Alloy (SMA) material modeling using shape memory effect.
-- Vibration analysis such as Random vibration, Shock to simulate the transportation conditions for surgical equipment.
-- Performed Snap fit simulations using constraint equations, non-linear stabilization, quasi-static analysis using explicit solver.
-- Experienced in using Hyperelastic and Creep material model, Bi-Linear, Multi-Linear, and non-linear plasticity model.
-- Used Prony Visco-elastic material model for optimization study using optiSlang.
-- Used Hyperelastic material model for modeling the Scleral (Eye tissue) for different age groups.
-- Experienced in performing anisotropic material mapping using MoldSim NL tool for NGPV.
-- Performed Fluid Pressure Penetration analysis of valve seals to verify the Sealing efficiency.
-- Worked on NLAD (Non-Linear Adaptive Meshing) for complex non-linear applications on seals.
-- Performed LCF (Low Cycle fatigue) for clamp model of NGPV module.
-- Performed linear and non-linear static analysis for yield strength verification and Factor of safety determination.
-- Worked on vitProbe model and performed calibration study to determine the factor of safety accurately.
-- Performed two-way FSI coupling analysis for the valve seal to determine the accurate sealing behavior.
+- Aligned with Instruments R&D team at Irvine, CA to work on structural and thermal simulation of surgical platform, vitrectomy probe and beveled high speed probe.   
+
+#### Customer: BSH Hausgeräte GmbH, Germany
+- Engaged with Cooking & Baking and Dishwasing division on providing advanced non-linear structural analysis.  
 
 #### Customer: Terumo, India
-- FEA analysis of HCF Fatigue of Blood Centrifuge.
+- Worked with BCT R&D Team on Fatigue analysis of Blood Centrifuge. 
 
 ### PROFESSIONAL TRAININGS
 - Trained on CADFEM inside ANSYS extensions at CADFEM India, Hyderabad by CADFEM Gmbh.

@@ -60,6 +60,9 @@ Bengaluru, Karnataka | +91 8688370485 | bhanu93@live.com
 #### Customer: BSH Hausgeräte GmbH, Germany
 - Engaged with Cooking & Baking and Dishwasing division on providing advanced non-linear structural analysis.  
 
+#### Customer: Grundfos, Denmark
+- Collaborated with industrial pumps division for supporiting on dynamic analysis. 
+
 #### Customer: Terumo, India
 - Worked with BCT R&D Team on Fatigue analysis of Blood Centrifuge. 
 

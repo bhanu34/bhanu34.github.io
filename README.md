@@ -67,7 +67,9 @@ Bengaluru, Karnataka | +91 8688370485 | bhanu93@live.com
 - Worked with BCT R&D Team on Fatigue analysis of Blood Centrifuge.
 
 #### Customer: Thermo King (Trane Technologies), USA
-- Predcited the reliability of Jolt (Telematic control module of refrigirated trucks) using ANSYS Sherlock for different loads expected during lifetime. 
+- Predicted the reliability of Jolt (Telematic control module of refrigerator trucks) using ANSYS Sherlock for different loads expected during lifetime. 
 
+#### Customer: Saankhya Labs, India
+- Collaborated with R&D Team in Bangalore to predict the reliability of 5G Remote Radio Unit (RU) using ANSYS Sherlock for different Thermal and Structural loads expected during lifetime.
 
 

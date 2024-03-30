@@ -64,12 +64,10 @@ Bengaluru, Karnataka | +91 8688370485 | bhanu93@live.com
 - Collaborated with industrial pumps division for supporiting on dynamic analysis. 
 
 #### Customer: Terumo, India
-- Worked with BCT R&D Team on Fatigue analysis of Blood Centrifuge. 
+- Worked with BCT R&D Team on Fatigue analysis of Blood Centrifuge.
 
-### PROFESSIONAL TRAININGS
-- Trained on CADFEM inside ANSYS extensions at CADFEM India, Hyderabad by CADFEM Gmbh.
-- Trained on Contact Modeling with ANSYS Mechanical at CADFEM India, Hyderabad by CADFEM Gmbh.
-- Trained on Structural Dynamics and Vibration Technology at CADFEM India, Hyderabad by CADFEM Gmbh.
-- Trained on Fatigue Strength Assessment with ANSYS nCode Designlife at CADFEM India, Hyderabad by CADFEM Gmbh.
-- Trained on Nonlinear Structural Mechanical Calculations using ANSYS Mechanical at CADFEM India, Hyderabad by CADFEM Gmbh.
+#### Customer: Thermo King (Trane Technologies), USA
+- Predcited the reliability of Jolt (Telematic control module of refrigirated trucks) using ANSYS Sherlock for different loads expected during lifetime. 
+
+
 

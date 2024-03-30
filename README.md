@@ -72,4 +72,11 @@ Bengaluru, Karnataka | +91 8688370485 | bhanu93@live.com
 #### Customer: Saankhya Labs, India
 - Collaborated with R&D Team in Bangalore to predict the reliability of 5G Remote Radio Unit (RU) using ANSYS Sherlock for different Thermal and Structural loads expected during lifetime.
 
+## PROFESSIONAL SUMMARY
+
+### M.Tech in Mechanical Engineering 2019-2021
+**BITS Pilani, WILP**
+
+### B.Tech in Civil Engineering 2013-2017
+**JNTU, Hyderabad**
 

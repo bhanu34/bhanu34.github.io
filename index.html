@@ -28,22 +28,6 @@
           </svg>
           bhanu.dev
         </a>
-        <div class="top-controls">
-          <span class="pink-status-dot"></span>
-          <button class="theme-btn" aria-label="Toggle theme">
-            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-              <circle cx="12" cy="12" r="5"></circle>
-              <line x1="12" y1="1" x2="12" y2="3"></line>
-              <line x1="12" y1="21" x2="12" y2="23"></line>
-              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
-              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
-              <line x1="1" y1="12" x2="3" y2="12"></line>
-              <line x1="21" y1="12" x2="23" y2="12"></line>
-              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
-              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
-            </svg>
-          </button>
-        </div>
       </div>
 
       <div class="sidebar-group">
@@ -91,16 +75,6 @@
           Education
         </a>
       </nav>
-
-      <!-- Sidebar CTAs & Widgets -->
-      <a href="resume.pdf" class="download-btn" target="_blank">
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
-          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
-          <polyline points="7 10 12 15 17 10"></polyline>
-          <line x1="12" y1="15" x2="12" y2="3"></line>
-        </svg>
-        Download CV (.PDF)
-      </a>
 
       <div class="sidebar-group">
         <h4 class="sidebar-heading">Stay Connected</h4>
@@ -173,30 +147,16 @@
               </div>
             </div>
 
-            <!-- Mascot Illustration Panel -->
-            <div class="mascot-panel">
-              <div class="mascot-art">
-                <svg width="210" height="210" viewBox="0 0 240 240" fill="none">
-                  <circle cx="120" cy="120" r="105" fill="#f472b6"/>
-                  <ellipse cx="115" cy="140" rx="35" ry="25" fill="#ffffff" stroke="#161618" stroke-width="4.5"/>
-                  <path d="M95 155 L90 185 L102 185 L105 158" fill="#ffffff" stroke="#161618" stroke-width="4" stroke-linejoin="round"/>
-                  <path d="M125 155 L130 185 L142 185 L135 155" fill="#ffffff" stroke="#161618" stroke-width="4" stroke-linejoin="round"/>
-                  <circle cx="95" cy="108" r="32" fill="#ffffff" stroke="#161618" stroke-width="4.5"/>
-                  <circle cx="85" cy="102" r="3.5" fill="#161618"/>
-                  <path d="M78 116 Q85 124 94 116" stroke="#161618" stroke-width="3" stroke-linecap="round"/>
-                  <path d="M76 96 C50 65 95 40 115 75 C122 92 108 110 88 104" fill="none" stroke="#facc15" stroke-width="15" stroke-linecap="round"/>
-                  <path d="M76 96 C50 65 95 40 115 75 C122 92 108 110 88 104" fill="none" stroke="#ca8a04" stroke-width="2"/>
-                  <path d="M84 118 Q72 130 78 150" fill="none" stroke="#161618" stroke-width="3.5" stroke-linecap="round"/>
-                  <rect x="74" y="148" width="8" height="12" rx="2" fill="#161618"/>
-                  <g transform="rotate(-18 145 110)">
-                    <rect x="110" y="85" width="105" height="52" rx="4" fill="#34d399" stroke="#161618" stroke-width="4.5"/>
-                    <rect x="122" y="93" width="12" height="28" rx="2" fill="#064e3b" stroke="#161618" stroke-width="2"/>
-                    <rect x="144" y="93" width="12" height="28" rx="2" fill="#064e3b" stroke="#161618" stroke-width="2"/>
-                    <rect x="166" y="93" width="12" height="28" rx="2" fill="#064e3b" stroke="#161618" stroke-width="2"/>
-                    <rect x="188" y="93" width="12" height="28" rx="2" fill="#064e3b" stroke="#161618" stroke-width="2"/>
-                    <line x1="114" y1="137" x2="211" y2="137" stroke="#facc15" stroke-width="5" stroke-dasharray="4 2"/>
-                  </g>
-                </svg>
+            <!-- Profile Photo & Speech Bubble -->
+            <div class="profile-panel">
+              <div class="profile-frame">
+                <!-- Replace 'profile.jpg' with your photo path -->
+                <img src="profile.jpg" alt="Bhanu Pratap Reddy" class="profile-img" onerror="this.style.display='none'; document.getElementById('avatar-fallback').style.display='flex';" />
+                
+                <!-- Fallback Initial Avatar if photo is not yet loaded -->
+                <div id="avatar-fallback" class="avatar-fallback" style="display: none;">
+                  <span>BPR</span>
+                </div>
               </div>
 
               <div class="comic-bubble">

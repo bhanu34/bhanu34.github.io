@@ -36,7 +36,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* Top Red Accent */
+/* Top Red Accent Stripe */
 .top-accent-line {
   height: 3px;
   background-color: var(--top-red);
@@ -350,7 +350,7 @@ a {
   border-top: 1px solid var(--border-subtle);
 }
 
-/* Section Headers & Filters */
+/* Section Headers & Tag Filter Pills */
 .section-title-wrap {
   margin-bottom: 2rem;
 }
@@ -395,7 +395,7 @@ a {
   font-family: 'JetBrains Mono', monospace;
 }
 
-/* Posts / Articles Table */
+/* Posts / Travel List Table */
 .posts-table {
   display: flex;
   flex-direction: column;

@@ -5,12 +5,11 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Tania Rascia – Principal software engineer, writer</title>
   
-  <!-- Font -->
+  <!-- Typography -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-  <!-- External Stylesheet -->
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -20,10 +19,10 @@
 
   <div class="site-wrapper">
     
-    <!-- LEFT SIDEBAR -->
+    <!-- STICKY LEFT SIDEBAR -->
     <aside class="sidebar">
       <div class="sidebar-top">
-        <a href="/" class="brand-title">
+        <a href="#about" class="brand-title">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="#a5b4fc">
             <path d="M19 2H5C3.89 2 3 2.89 3 4V20C3 21.11 3.89 22 5 22H19C20.11 22 21 21.11 21 20V6L19 2ZM12 4C13.11 4 14 4.89 14 6C14 7.11 13.11 8 12 8C10.89 8 10 7.11 10 6C10 4.89 10.89 4 12 4ZM17 20H7V13H17V20Z"/>
           </svg>
@@ -50,12 +49,11 @@
       <div class="sidebar-group">
         <h4 class="sidebar-heading">About Me</h4>
         <p class="sidebar-bio">
-          I'm <a href="#">Tania</a>, software engineer and open-source creator. This is my digital garden. 🌱
+          I'm <a href="#about" class="pink-link">Tania</a>, software engineer and open-source creator. This is my digital garden. 🌱
         </p>
       </div>
 
       <nav class="sidebar-nav">
-        <!-- Blog -->
         <a href="#blog" class="nav-entry">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
             <rect x="5" y="3" width="15" height="18" rx="2" fill="#fed7aa" stroke="#9a3412" stroke-width="1.5"/>
@@ -67,7 +65,6 @@
           Blog
         </a>
 
-        <!-- Projects -->
         <a href="#projects" class="nav-entry">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
             <rect x="3" y="4" width="18" height="16" rx="2" fill="#334155" stroke="#64748b" stroke-width="1.5"/>
@@ -81,8 +78,7 @@
           Projects
         </a>
 
-        <!-- About Me -->
-        <a href="#about" class="nav-entry">
+        <a href="#about" class="nav-entry active">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="#a5b4fc">
             <path d="M19 2H5C3.89 2 3 2.89 3 4V20C3 21.11 3.89 22 5 22H19C20.11 22 21 21.11 21 20V6L19 2ZM12 4C13.11 4 14 4.89 14 6C14 7.11 13.11 8 12 8C10.89 8 10 7.11 10 6C10 4.89 10.89 4 12 4ZM17 20H7V13H17V20Z"/>
           </svg>
@@ -110,7 +106,6 @@
         </div>
       </div>
 
-      <!-- New Moon Widget -->
       <div class="card-widget">
         <div class="card-widget-title">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fcd34d" stroke-width="1.8">
@@ -120,10 +115,9 @@
           </svg>
           New Moon Theme
         </div>
-        <p>I use and maintain <a href="#">New Moon</a>, a dark theme for <a href="#">Visual Studio Code</a>.</p>
+        <p>I use and maintain <a href="#" class="pink-link">New Moon</a>, a dark theme for <a href="#" class="pink-link">Visual Studio Code</a>.</p>
       </div>
 
-      <!-- Setting Up a Mac Widget -->
       <div class="card-widget">
         <div class="card-widget-title">
           <svg width="16" height="16" viewBox="0 0 170 170" fill="none">
@@ -132,92 +126,240 @@
           </svg>
           Setting Up a Mac?
         </div>
-        <p>Read my guide to <a href="#">setting up a Mac for development</a>.</p>
+        <p>Read my guide to <a href="#" class="pink-link">setting up a Mac for development</a>.</p>
       </div>
     </aside>
 
-    <!-- MAIN RIGHT CONTENT -->
+    <!-- SCROLLING MAIN CONTENT CANVAS -->
     <main class="main-canvas">
       <div class="canvas-inner">
         
-        <div class="hero-layout">
-          <!-- Text Body -->
-          <div>
-            <h1 class="hero-h1">Hey, I'm Tania!</h1>
-            <p class="hero-sub">Principal software engineer, writer, all-around nerd.</p>
+        <!-- SECTION 1: ABOUT ME -->
+        <section id="about" class="page-section">
+          <div class="hero-layout">
+            <div>
+              <h1 class="hero-h1">Hey, I'm Tania!</h1>
+              <p class="hero-sub">Principal software engineer, writer, all-around nerd.</p>
+              
+              <h3 class="timeline-title">A brief timeline</h3>
+
+              <div class="timeline-list">
+                <div class="timeline-item">
+                  <span class="timeline-year">1998–2006</span>
+                  <span class="timeline-detail">Geocities kid, forum-goer, gamer, lover of obscure '80s bands.</span>
+                </div>
+
+                <div class="timeline-item">
+                  <span class="timeline-year">2007–2014</span>
+                  <span class="timeline-detail">
+                    <a href="#" class="pink-link">Professional chef</a>: Culinary degree, 60–hour weeks in Chicago kitchens, line cook to chef-manager by 22.
+                  </span>
+                </div>
+
+                <div class="timeline-item">
+                  <span class="timeline-year">2014–2020</span>
+                  <span class="timeline-detail">
+                    <a href="#" class="pink-link">Career change</a>: Unpaid intern by day, cook by night, then junior dev to senior engineer. <a href="#" class="pink-link">Wrote everything down</a> along the way.
+                  </span>
+                </div>
+
+                <div class="timeline-item">
+                  <span class="timeline-year">2021–now</span>
+                  <span class="timeline-detail">
+                    <a href="#" class="pink-link">Principal software engineer</a>: Building design systems, setting technical direction, shipping features, and still documenting: <a href="#" class="pink-link">177 posts</a>, <a href="#" class="pink-link">40+ publications</a>, and <a href="#" class="pink-link">20,000+ stars on GitHub</a>.
+                  </span>
+                </div>
+              </div>
+
+              <div class="timeline-extra">
+                <a href="#" class="pink-link">Also</a>: city explorer, weight-lifter, brick-clicker, accordion enthusiast, biker, Magic gatherer, webmaster.
+              </div>
+            </div>
+
+            <!-- Mascot Panel -->
+            <div class="mascot-panel">
+              <div class="mascot-art">
+                <svg width="210" height="210" viewBox="0 0 240 240" fill="none">
+                  <circle cx="120" cy="120" r="105" fill="#f472b6"/>
+                  <ellipse cx="115" cy="140" rx="35" ry="25" fill="#ffffff" stroke="#161618" stroke-width="4.5"/>
+                  <path d="M95 155 L90 185 L102 185 L105 158" fill="#ffffff" stroke="#161618" stroke-width="4" stroke-linejoin="round"/>
+                  <path d="M125 155 L130 185 L142 185 L135 155" fill="#ffffff" stroke="#161618" stroke-width="4" stroke-linejoin="round"/>
+                  <circle cx="95" cy="108" r="32" fill="#ffffff" stroke="#161618" stroke-width="4.5"/>
+                  <circle cx="85" cy="102" r="3.5" fill="#161618"/>
+                  <path d="M78 116 Q85 124 94 116" stroke="#161618" stroke-width="3" stroke-linecap="round"/>
+                  <path d="M76 96 C50 65 95 40 115 75 C122 92 108 110 88 104" fill="none" stroke="#facc15" stroke-width="15" stroke-linecap="round"/>
+                  <path d="M76 96 C50 65 95 40 115 75 C122 92 108 110 88 104" fill="none" stroke="#ca8a04" stroke-width="2"/>
+                  <path d="M84 118 Q72 130 78 150" fill="none" stroke="#161618" stroke-width="3.5" stroke-linecap="round"/>
+                  <rect x="74" y="148" width="8" height="12" rx="2" fill="#161618"/>
+                  <g transform="rotate(-18 145 110)">
+                    <rect x="110" y="85" width="105" height="52" rx="4" fill="#34d399" stroke="#161618" stroke-width="4.5"/>
+                    <rect x="122" y="93" width="12" height="28" rx="2" fill="#064e3b" stroke="#161618" stroke-width="2"/>
+                    <rect x="144" y="93" width="12" height="28" rx="2" fill="#064e3b" stroke="#161618" stroke-width="2"/>
+                    <rect x="166" y="93" width="12" height="28" rx="2" fill="#064e3b" stroke="#161618" stroke-width="2"/>
+                    <rect x="188" y="93" width="12" height="28" rx="2" fill="#064e3b" stroke="#161618" stroke-width="2"/>
+                    <line x1="114" y1="137" x2="211" y2="137" stroke="#facc15" stroke-width="5" stroke-dasharray="4 2"/>
+                  </g>
+                </svg>
+              </div>
+
+              <div class="comic-bubble">
+                Can't remember how to spell my name? Just go to <a href="#" class="pink-link">tania.dev</a>!
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- SECTION 2: BLOG / ARTICLES -->
+        <section id="blog" class="page-section">
+          <div class="section-title-wrap">
+            <h2 class="section-heading">Articles & Guides</h2>
+            <div class="tag-filter-list">
+              <button class="filter-pill active">All <span class="count">177</span></button>
+              <button class="filter-pill">JavaScript <span class="count">42</span></button>
+              <button class="filter-pill">React <span class="count">28</span></button>
+              <button class="filter-pill">Guides <span class="count">31</span></button>
+              <button class="filter-pill">Personal <span class="count">19</span></button>
+            </div>
+          </div>
+
+          <div class="posts-table">
             
-            <h3 class="timeline-title">A brief timeline</h3>
-
-            <div class="timeline-list">
-              <div class="timeline-item">
-                <span class="timeline-year">1998–2006</span>
-                <span class="timeline-detail">Geocities kid, forum-goer, gamer, lover of obscure '80s bands.</span>
+            <a href="#" class="post-row">
+              <div class="post-left">
+                <span class="post-title">Understanding the Event Loop, Callbacks, Promises, and Async/Await</span>
+                <span class="post-badge">JavaScript</span>
               </div>
+              <time class="post-date">Jul 18, 2026</time>
+            </a>
 
-              <div class="timeline-item">
-                <span class="timeline-year">2007–2014</span>
-                <span class="timeline-detail">
-                  <a href="#">Professional chef</a>: Culinary degree, 60–hour weeks in Chicago kitchens, line cook to chef-manager by 22.
-                </span>
+            <a href="#" class="post-row">
+              <div class="post-left">
+                <span class="post-title">How to Build a Custom Component Design System with Vanilla CSS and TypeScript</span>
+                <span class="post-badge">TypeScript</span>
               </div>
+              <time class="post-date">Jun 24, 2026</time>
+            </a>
 
-              <div class="timeline-item">
-                <span class="timeline-year">2014–2020</span>
-                <span class="timeline-detail">
-                  <a href="#">Career change</a>: Unpaid intern by day, cook by night, then junior dev to senior engineer. <a href="#">Wrote everything down</a> along the way.
-                </span>
+            <a href="#" class="post-row">
+              <div class="post-left">
+                <span class="post-title">Full Stack Development Guide: Building Robust Node & SQLite Backends</span>
+                <span class="post-badge">Node.js</span>
               </div>
+              <time class="post-date">May 12, 2026</time>
+            </a>
 
-              <div class="timeline-item">
-                <span class="timeline-year">2021–now</span>
-                <span class="timeline-detail">
-                  <a href="#">Principal software engineer</a>: Building design systems, setting technical direction, shipping features, and still documenting: <a href="#">177 posts</a>, <a href="#">40+ publications</a>, and <a href="#">20,000+ stars on GitHub</a>.
-                </span>
+            <a href="#" class="post-row">
+              <div class="post-left">
+                <span class="post-title">How to Set Up a New Mac for Development in 2026</span>
+                <span class="post-badge">Guides</span>
               </div>
-            </div>
+              <time class="post-date">Mar 02, 2026</time>
+            </a>
 
-            <div class="timeline-extra">
-              <a href="#" class="pink-link">Also</a>: city explorer, weight-lifter, brick-clicker, accordion enthusiast, biker, Magic gatherer, webmaster.
-            </div>
+            <a href="#" class="post-row">
+              <div class="post-left">
+                <span class="post-title">Design Patterns for Modern Frontend Architectures</span>
+                <span class="post-badge">React</span>
+              </div>
+              <time class="post-date">Jan 15, 2026</time>
+            </a>
+
+            <a href="#" class="post-row">
+              <div class="post-left">
+                <span class="post-title">Reflections on Ten Years in Tech: From Kitchens to Principal Engineer</span>
+                <span class="post-badge">Personal</span>
+              </div>
+              <time class="post-date">Dec 20, 2025</time>
+            </a>
+
+          </div>
+        </section>
+
+        <!-- SECTION 3: PROJECTS -->
+        <section id="projects" class="page-section">
+          <div class="section-title-wrap">
+            <h2 class="section-heading">Open Source & Projects</h2>
           </div>
 
-          <!-- Mascot Cartoon & Speech Bubble -->
-          <div class="mascot-panel">
-            <div class="mascot-art">
-              <svg width="210" height="210" viewBox="0 0 240 240" fill="none">
-                <circle cx="120" cy="120" r="105" fill="#f472b6"/>
-                <ellipse cx="115" cy="140" rx="35" ry="25" fill="#ffffff" stroke="#161618" stroke-width="4.5"/>
-                <path d="M95 155 L90 185 L102 185 L105 158" fill="#ffffff" stroke="#161618" stroke-width="4" stroke-linejoin="round"/>
-                <path d="M125 155 L130 185 L142 185 L135 155" fill="#ffffff" stroke="#161618" stroke-width="4" stroke-linejoin="round"/>
-                <circle cx="95" cy="108" r="32" fill="#ffffff" stroke="#161618" stroke-width="4.5"/>
-                <circle cx="85" cy="102" r="3.5" fill="#161618"/>
-                <path d="M78 116 Q85 124 94 116" stroke="#161618" stroke-width="3" stroke-linecap="round"/>
-                <path d="M76 96 C50 65 95 40 115 75 C122 92 108 110 88 104" fill="none" stroke="#facc15" stroke-width="15" stroke-linecap="round"/>
-                <path d="M76 96 C50 65 95 40 115 75 C122 92 108 110 88 104" fill="none" stroke="#ca8a04" stroke-width="2"/>
-                <path d="M84 118 Q72 130 78 150" fill="none" stroke="#161618" stroke-width="3.5" stroke-linecap="round"/>
-                <rect x="74" y="148" width="8" height="12" rx="2" fill="#161618"/>
-                <g transform="rotate(-18 145 110)">
-                  <rect x="110" y="85" width="105" height="52" rx="4" fill="#34d399" stroke="#161618" stroke-width="4.5"/>
-                  <rect x="122" y="93" width="12" height="28" rx="2" fill="#064e3b" stroke="#161618" stroke-width="2"/>
-                  <rect x="144" y="93" width="12" height="28" rx="2" fill="#064e3b" stroke="#161618" stroke-width="2"/>
-                  <rect x="166" y="93" width="12" height="28" rx="2" fill="#064e3b" stroke="#161618" stroke-width="2"/>
-                  <rect x="188" y="93" width="12" height="28" rx="2" fill="#064e3b" stroke="#161618" stroke-width="2"/>
-                  <line x1="114" y1="137" x2="211" y2="137" stroke="#facc15" stroke-width="5" stroke-dasharray="4 2"/>
-                </g>
-              </svg>
+          <div class="projects-grid">
+            
+            <div class="project-tile">
+              <div class="tile-header">
+                <h3 class="tile-title"><a href="#" class="pink-link">New Moon Theme</a></h3>
+                <span class="tile-star">★ 2.4k</span>
+              </div>
+              <p class="tile-desc">The optimized dark theme for web development and writing in VS Code.</p>
+              <div class="tile-footer">
+                <span class="tech-tag">VS Code Extension</span>
+                <a href="#" class="source-link">GitHub ↗</a>
+              </div>
             </div>
 
-            <div class="comic-bubble">
-              Can't remember how to spell my name? Just go to <a href="#">tania.dev</a>!
+            <div class="project-tile">
+              <div class="tile-header">
+                <h3 class="tile-title"><a href="#" class="pink-link">Primitive UI</a></h3>
+                <span class="tile-star">★ 1.8k</span>
+              </div>
+              <p class="tile-desc">A minimal, dependency-free CSS design system for building clean modern websites.</p>
+              <div class="tile-footer">
+                <span class="tech-tag">CSS / SASS</span>
+                <a href="#" class="source-link">GitHub ↗</a>
+              </div>
             </div>
+
+            <div class="project-tile">
+              <div class="tile-header">
+                <h3 class="tile-title"><a href="#" class="pink-link">TakeNote</a></h3>
+                <span class="tile-star">★ 4.6k</span>
+              </div>
+              <p class="tile-desc">A web-based note-taking app with markdown editor support, sync, and offline persistence.</p>
+              <div class="tile-footer">
+                <span class="tech-tag">React / TypeScript</span>
+                <a href="#" class="source-link">GitHub ↗</a>
+              </div>
+            </div>
+
+            <div class="project-tile">
+              <div class="tile-header">
+                <h3 class="tile-title"><a href="#" class="pink-link">Laconia MVC</a></h3>
+                <span class="tile-star">★ 950</span>
+              </div>
+              <p class="tile-desc">A lightweight custom MVC framework written in modern PHP without bloated abstractions.</p>
+              <div class="tile-footer">
+                <span class="tech-tag">PHP / MySQL</span>
+                <a href="#" class="source-link">GitHub ↗</a>
+              </div>
+            </div>
+
           </div>
-
-        </div>
+        </section>
 
       </div>
     </main>
 
   </div>
 
+  <script>
+    // Smooth scroll navigation active state updates
+    const navLinks = document.querySelectorAll('.sidebar-nav .nav-entry');
+    const sections = document.querySelectorAll('.page-section');
+
+    window.addEventListener('scroll', () => {
+      let current = '';
+      sections.forEach(section => {
+        const sectionTop = section.offsetTop - 120;
+        if (pageYOffset >= sectionTop) {
+          current = section.getAttribute('id');
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === `#${current}`) {
+          link.classList.add('active');
+        }
+      });
+    });
+  </script>
 </body>
 </html>

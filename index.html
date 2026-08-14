@@ -3,346 +3,36 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>tania.dev</title>
+  <title>Tania Rascia – Principal software engineer, writer</title>
+  
+  <!-- Font -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
-  
-  <style>
-    /* Global Reset & Base */
-    *, *::before, *::after {
-      box-sizing: border-box;
-      margin: 0;
-      padding: 0;
-    }
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 
-    body {
-      font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
-      background-color: #18181a;
-      color: #e5e5e5;
-      line-height: 1.6;
-      -webkit-font-smoothing: antialiased;
-      margin: 0;
-    }
-
-    /* Top Red Accent Bar */
-    .top-accent-bar {
-      height: 3px;
-      background-color: #d32f2f;
-      width: 100%;
-      position: fixed;
-      top: 0;
-      left: 0;
-      z-index: 1000;
-    }
-
-    /* Outer Wrapper */
-    .site-wrapper {
-      display: flex;
-      min-height: 100vh;
-      padding-top: 3px;
-    }
-
-    /* --- SIDEBAR --- */
-    .sidebar {
-      width: 270px;
-      min-width: 270px;
-      background-color: #1d1d1f;
-      border-right: 1px solid #28282c;
-      padding: 1.5rem 1.25rem;
-      display: flex;
-      flex-direction: column;
-      gap: 1.65rem;
-      flex-shrink: 0;
-    }
-
-    .sidebar-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-    }
-
-    .brand-title {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: #ffffff;
-      text-decoration: none;
-      display: flex;
-      align-items: center;
-      gap: 0.45rem;
-    }
-
-    .header-icons {
-      display: flex;
-      align-items: center;
-      gap: 0.65rem;
-    }
-
-    .pink-dot {
-      width: 11px;
-      height: 11px;
-      background-color: #ea5b80;
-      border-radius: 50%;
-      display: inline-block;
-    }
-
-    .theme-button {
-      background: transparent;
-      border: none;
-      color: #8e8e93;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      padding: 0;
-    }
-
-    .theme-button:hover {
-      color: #ffffff;
-    }
-
-    .sidebar-block {
-      display: flex;
-      flex-direction: column;
-      gap: 0.35rem;
-    }
-
-    .sidebar-heading {
-      font-size: 0.95rem;
-      font-weight: 700;
-      color: #ffffff;
-    }
-
-    .sidebar-bio {
-      font-size: 0.88rem;
-      color: #9a9aa2;
-      line-height: 1.5;
-    }
-
-    .sidebar-nav {
-      display: flex;
-      flex-direction: column;
-      gap: 0.6rem;
-    }
-
-    .sidebar-nav a {
-      color: #ffffff;
-      text-decoration: none;
-      font-size: 0.95rem;
-      font-weight: 600;
-      display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      transition: color 0.15s ease;
-    }
-
-    .sidebar-nav a:hover {
-      color: #ea5b80;
-    }
-
-    .social-row {
-      display: flex;
-      align-items: center;
-      gap: 0.85rem;
-      margin-top: 0.25rem;
-    }
-
-    .social-row a {
-      color: #8e8e93;
-      display: inline-flex;
-      text-decoration: none;
-      transition: color 0.15s ease;
-    }
-
-    .social-row a:hover {
-      color: #ffffff;
-    }
-
-    .card-box {
-      background-color: #242427;
-      border: 1px solid #2e2e33;
-      border-radius: 8px;
-      padding: 0.85rem 1rem;
-      font-size: 0.83rem;
-      color: #9a9aa2;
-      line-height: 1.45;
-    }
-
-    .card-box-title {
-      font-size: 0.88rem;
-      font-weight: 700;
-      color: #ffffff;
-      margin-bottom: 0.35rem;
-      display: flex;
-      align-items: center;
-      gap: 0.45rem;
-    }
-
-    /* Links with Pink Accents */
-    .pink-link {
-      color: #ea5b80;
-      text-decoration: underline;
-      text-underline-offset: 3px;
-      font-weight: inherit;
-    }
-
-    .pink-link:hover {
-      color: #ff7599;
-    }
-
-    /* --- MAIN CONTENT AREA --- */
-    .main-wrapper {
-      flex: 1;
-      padding: 3.5rem 3.5rem 5rem 3.5rem;
-      display: flex;
-      justify-content: flex-start;
-      background-color: #18181a;
-      overflow-x: auto;
-    }
-
-    .content-area {
-      max-width: 960px;
-      width: 100%;
-    }
-
-    .hero-split {
-      display: grid;
-      grid-template-columns: 1fr 270px;
-      gap: 3.5rem;
-      align-items: start;
-    }
-
-    .hero-title {
-      font-size: 2.75rem;
-      font-weight: 800;
-      letter-spacing: -0.035em;
-      color: #ffffff;
-      line-height: 1.15;
-      margin-bottom: 0.6rem;
-    }
-
-    .hero-subtitle {
-      font-size: 1.15rem;
-      font-weight: 500;
-      color: #e5e5e5;
-      margin-bottom: 2.25rem;
-    }
-
-    .section-title {
-      font-size: 1.15rem;
-      font-weight: 700;
-      color: #ffffff;
-      margin-bottom: 1.25rem;
-    }
-
-    .timeline-items {
-      display: flex;
-      flex-direction: column;
-      gap: 1.4rem;
-    }
-
-    .timeline-row {
-      display: grid;
-      grid-template-columns: 88px 1fr;
-      gap: 1.25rem;
-      align-items: baseline;
-      font-size: 0.95rem;
-    }
-
-    .timeline-year {
-      font-family: 'JetBrains Mono', monospace;
-      font-size: 0.82rem;
-      color: #8e8e93;
-    }
-
-    .timeline-text {
-      color: #e5e5e5;
-      line-height: 1.55;
-    }
-
-    .timeline-footer {
-      margin-top: 2.25rem;
-      font-size: 0.95rem;
-      line-height: 1.6;
-      color: #e5e5e5;
-    }
-
-    /* Mascot Right Column */
-    .mascot-column {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.25rem;
-      margin-top: 0.25rem;
-    }
-
-    .speech-bubble {
-      background-color: #212124;
-      border: 1px solid #2d2d32;
-      border-radius: 8px;
-      padding: 0.85rem 1rem;
-      font-size: 0.82rem;
-      color: #9a9aa2;
-      text-align: center;
-      position: relative;
-      width: 220px;
-      line-height: 1.45;
-    }
-
-    .speech-bubble::before {
-      content: '';
-      position: absolute;
-      top: -6px;
-      left: 50%;
-      transform: translateX(-50%) rotate(45deg);
-      width: 10px;
-      height: 10px;
-      background-color: #212124;
-      border-left: 1px solid #2d2d32;
-      border-top: 1px solid #2d2d32;
-    }
-
-    /* Responsiveness */
-    @media (max-width: 920px) {
-      .site-wrapper {
-        flex-direction: column;
-      }
-      .sidebar {
-        width: 100%;
-        min-width: 100%;
-        border-right: none;
-        border-bottom: 1px solid #28282c;
-      }
-      .hero-split {
-        grid-template-columns: 1fr;
-      }
-      .mascot-column {
-        margin-top: 2rem;
-        align-items: flex-start;
-      }
-      .main-wrapper {
-        padding: 2rem 1.25rem;
-      }
-    }
-  </style>
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Top Red Accent Line -->
-  <div class="top-accent-bar"></div>
+  <!-- Top Red Accent Stripe -->
+  <div class="top-accent-line"></div>
 
   <div class="site-wrapper">
     
     <!-- LEFT SIDEBAR -->
     <aside class="sidebar">
-      <div class="sidebar-header">
+      <div class="sidebar-top">
         <a href="/" class="brand-title">
-          <span>💾</span> tania.dev
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#a5b4fc">
+            <path d="M19 2H5C3.89 2 3 2.89 3 4V20C3 21.11 3.89 22 5 22H19C20.11 22 21 21.11 21 20V6L19 2ZM12 4C13.11 4 14 4.89 14 6C14 7.11 13.11 8 12 8C10.89 8 10 7.11 10 6C10 4.89 10.89 4 12 4ZM17 20H7V13H17V20Z"/>
+          </svg>
+          tania.dev
         </a>
-        <div class="header-icons">
-          <span class="pink-dot"></span>
-          <button class="theme-button" aria-label="Toggle theme">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        <div class="top-controls">
+          <span class="pink-status-dot"></span>
+          <button class="theme-btn" aria-label="Toggle theme">
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
               <circle cx="12" cy="12" r="5"></circle>
               <line x1="12" y1="1" x2="12" y2="3"></line>
               <line x1="12" y1="21" x2="12" y2="23"></line>
@@ -357,123 +47,168 @@
         </div>
       </div>
 
-      <div class="sidebar-block">
+      <div class="sidebar-group">
         <h4 class="sidebar-heading">About Me</h4>
         <p class="sidebar-bio">
-          I'm <a href="#" class="pink-link">Tania</a>, software engineer and open-source creator. This is my digital garden. 🌱
+          I'm <a href="#">Tania</a>, software engineer and open-source creator. This is my digital garden. 🌱
         </p>
       </div>
 
       <nav class="sidebar-nav">
-        <a href="#blog"><span>📝</span> Blog</a>
-        <a href="#projects"><span>💻</span> Projects</a>
-        <a href="#about"><span>💾</span> About Me</a>
+        <!-- Blog -->
+        <a href="#blog" class="nav-entry">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <rect x="5" y="3" width="15" height="18" rx="2" fill="#fed7aa" stroke="#9a3412" stroke-width="1.5"/>
+            <line x1="3" y1="6" x2="7" y2="6" stroke="#9a3412" stroke-width="2" stroke-linecap="round"/>
+            <line x1="3" y1="10" x2="7" y2="10" stroke="#9a3412" stroke-width="2" stroke-linecap="round"/>
+            <line x1="3" y1="14" x2="7" y2="14" stroke="#9a3412" stroke-width="2" stroke-linecap="round"/>
+            <line x1="3" y1="18" x2="7" y2="18" stroke="#9a3412" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+          Blog
+        </a>
+
+        <!-- Projects -->
+        <a href="#projects" class="nav-entry">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <rect x="3" y="4" width="18" height="16" rx="2" fill="#334155" stroke="#64748b" stroke-width="1.5"/>
+            <line x1="3" y1="9" x2="21" y2="9" stroke="#64748b" stroke-width="1.5"/>
+            <circle cx="6" cy="6.5" r="1" fill="#f87171"/>
+            <circle cx="9" cy="6.5" r="1" fill="#fbbf24"/>
+            <circle cx="12" cy="6.5" r="1" fill="#4ade80"/>
+            <line x1="6" y1="13" x2="10" y2="13" stroke="#38bdf8" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="6" y1="16" x2="14" y2="16" stroke="#e2e8f0" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
+          Projects
+        </a>
+
+        <!-- About Me -->
+        <a href="#about" class="nav-entry">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#a5b4fc">
+            <path d="M19 2H5C3.89 2 3 2.89 3 4V20C3 21.11 3.89 22 5 22H19C20.11 22 21 21.11 21 20V6L19 2ZM12 4C13.11 4 14 4.89 14 6C14 7.11 13.11 8 12 8C10.89 8 10 7.11 10 6C10 4.89 10.89 4 12 4ZM17 20H7V13H17V20Z"/>
+          </svg>
+          About Me
+        </a>
       </nav>
 
-      <div class="sidebar-block">
+      <div class="sidebar-group">
         <h4 class="sidebar-heading">Stay Connected</h4>
         <div class="social-row">
           <a href="#" aria-label="Email">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
           </a>
           <a href="#" aria-label="GitHub">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
           </a>
           <a href="#" aria-label="Bluesky">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566 1.01 0 1.875 0 5.48c0 4.195 2.06 14.155 12 18.52 9.94-4.365 12-14.325 12-18.52 0-3.605-2.566-4.47-5.202-2.675C16.046 4.747 13.087 8.686 12 10.8z"/></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566 1.01 0 1.875 0 5.48c0 4.195 2.06 14.155 12 18.52 9.94-4.365 12-14.325 12-18.52 0-3.605-2.566-4.47-5.202-2.675C16.046 4.747 13.087 8.686 12 10.8z"/>
+            </svg>
           </a>
           <a href="#" aria-label="RSS">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg>
           </a>
         </div>
       </div>
 
-      <!-- Theme Widget Card -->
-      <div class="card-box">
-        <div class="card-box-title">
-          <span>🌒</span> New Moon Theme
+      <!-- New Moon Widget -->
+      <div class="card-widget">
+        <div class="card-widget-title">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fcd34d" stroke-width="1.8">
+            <circle cx="12" cy="12" r="8"/>
+            <path d="M4.5 9.5C8 8.5 16 8.5 19.5 9.5"/>
+            <path d="M4.5 14.5C8 15.5 16 15.5 19.5 14.5"/>
+          </svg>
+          New Moon Theme
         </div>
-        <p>I use and maintain <a href="#" class="pink-link">New Moon</a>, a dark theme for <a href="#" class="pink-link">Visual Studio Code</a>.</p>
+        <p>I use and maintain <a href="#">New Moon</a>, a dark theme for <a href="#">Visual Studio Code</a>.</p>
       </div>
 
-      <!-- Mac Widget Card -->
-      <div class="card-box">
-        <div class="card-box-title">
-          <span>🍎</span> Setting Up a Mac?
+      <!-- Setting Up a Mac Widget -->
+      <div class="card-widget">
+        <div class="card-widget-title">
+          <svg width="16" height="16" viewBox="0 0 170 170" fill="none">
+            <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.74 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.34.13-9.16-1.9-14.49-6.08-3.48-2.82-7.46-7.53-11.94-14.13-6.52-9.68-11.66-20.73-15.42-33.15-3.76-12.42-5.64-24.32-5.64-35.7 0-14.34 3.63-26.33 10.9-35.98 7.27-9.65 16.5-14.61 27.69-14.88 4.58 0 9.87 1.25 15.86 3.75 5.99 2.5 9.77 3.82 11.34 3.96 1.45-.14 5.43-1.53 11.94-4.17 6.51-2.64 12.02-3.82 16.53-3.55 12.87.66 23.01 5.39 30.43 14.2-11.23 6.84-16.71 16.29-16.45 28.34.26 9.47 3.89 17.47 10.89 24 7 6.53 15.34 10.15 25.02 10.86-2.11 6.58-4.7 13.08-7.79 19.51z" fill="#4ade80"/>
+            <path d="M119.22 31.84c0-7.39 2.65-14.28 7.95-20.67 5.3-6.39 11.75-10.23 19.34-11.53.53 7.64-2.02 14.54-7.65 20.7-5.63 6.16-12.18 10-19.64 11.5z" fill="#fbbf24"/>
+          </svg>
+          Setting Up a Mac?
         </div>
-        <p>Read my guide to <a href="#" class="pink-link">setting up a Mac for development</a>.</p>
+        <p>Read my guide to <a href="#">setting up a Mac for development</a>.</p>
       </div>
     </aside>
 
     <!-- MAIN RIGHT CONTENT -->
-    <main class="main-wrapper">
-      <div class="content-area">
+    <main class="main-canvas">
+      <div class="canvas-inner">
         
-        <div class="hero-split">
-          <!-- Text Column -->
-          <div class="info-col">
-            <h1 class="hero-title">Hey, I'm Tania!</h1>
-            <p class="hero-subtitle">Principal software engineer, writer, all-around nerd.</p>
+        <div class="hero-layout">
+          <!-- Text Body -->
+          <div>
+            <h1 class="hero-h1">Hey, I'm Tania!</h1>
+            <p class="hero-sub">Principal software engineer, writer, all-around nerd.</p>
             
-            <h3 class="section-title">A brief timeline</h3>
+            <h3 class="timeline-title">A brief timeline</h3>
 
-            <div class="timeline-items">
-              
-              <div class="timeline-row">
+            <div class="timeline-list">
+              <div class="timeline-item">
                 <span class="timeline-year">1998–2006</span>
-                <span class="timeline-text">Geocities kid, forum-goer, gamer, lover of obscure '80s bands.</span>
+                <span class="timeline-detail">Geocities kid, forum-goer, gamer, lover of obscure '80s bands.</span>
               </div>
 
-              <div class="timeline-row">
+              <div class="timeline-item">
                 <span class="timeline-year">2007–2014</span>
-                <span class="timeline-text">
-                  <a href="#" class="pink-link">Professional chef</a>: Culinary degree, 60–hour weeks in Chicago kitchens, line cook to chef-manager by 22.
+                <span class="timeline-detail">
+                  <a href="#">Professional chef</a>: Culinary degree, 60–hour weeks in Chicago kitchens, line cook to chef-manager by 22.
                 </span>
               </div>
 
-              <div class="timeline-row">
+              <div class="timeline-item">
                 <span class="timeline-year">2014–2020</span>
-                <span class="timeline-text">
-                  <a href="#" class="pink-link">Career change</a>: Unpaid intern by day, cook by night, then junior dev to senior engineer. <a href="#" class="pink-link">Wrote everything down</a> along the way.
+                <span class="timeline-detail">
+                  <a href="#">Career change</a>: Unpaid intern by day, cook by night, then junior dev to senior engineer. <a href="#">Wrote everything down</a> along the way.
                 </span>
               </div>
 
-              <div class="timeline-row">
+              <div class="timeline-item">
                 <span class="timeline-year">2021–now</span>
-                <span class="timeline-text">
-                  <a href="#" class="pink-link">Principal software engineer</a>: Building design systems, setting technical direction, shipping features, and still documenting: <a href="#" class="pink-link">177 posts</a>, <a href="#" class="pink-link">40+ publications</a>, and <a href="#" class="pink-link">20,000+ stars on GitHub</a>.
+                <span class="timeline-detail">
+                  <a href="#">Principal software engineer</a>: Building design systems, setting technical direction, shipping features, and still documenting: <a href="#">177 posts</a>, <a href="#">40+ publications</a>, and <a href="#">20,000+ stars on GitHub</a>.
                 </span>
               </div>
-
             </div>
 
-            <div class="timeline-footer">
+            <div class="timeline-extra">
               <a href="#" class="pink-link">Also</a>: city explorer, weight-lifter, brick-clicker, accordion enthusiast, biker, Magic gatherer, webmaster.
             </div>
           </div>
 
-          <!-- Mascot Cartoon & Speech Bubble Column -->
-          <div class="mascot-column">
-            <svg width="200" height="200" viewBox="0 0 200 200">
-              <circle cx="100" cy="100" r="95" fill="#f472b6"/>
-              <!-- Head -->
-              <circle cx="92" cy="95" r="42" fill="#ffffff" stroke="#18181a" stroke-width="4"/>
-              <!-- Horn -->
-              <path d="M58,80 C40,48 80,28 94,58 C98,72 84,88 66,82" fill="none" stroke="#facc15" stroke-width="13" stroke-linecap="round"/>
-              <!-- Eyes & Smile -->
-              <circle cx="80" cy="88" r="3.5" fill="#18181a"/>
-              <path d="M70,105 Q82,114 94,105" fill="none" stroke="#18181a" stroke-width="3" stroke-linecap="round"/>
-              <!-- RAM stick character is holding -->
-              <g transform="rotate(-15 110 80)">
-                <rect x="108" y="70" width="80" height="42" rx="3" fill="#34d399" stroke="#18181a" stroke-width="4"/>
-                <rect x="122" y="76" width="10" height="24" rx="2" fill="#064e3b"/>
-                <rect x="142" y="76" width="10" height="24" rx="2" fill="#064e3b"/>
-                <rect x="162" y="76" width="10" height="24" rx="2" fill="#064e3b"/>
-              </g>
-            </svg>
+          <!-- Mascot Cartoon & Speech Bubble -->
+          <div class="mascot-panel">
+            <div class="mascot-art">
+              <svg width="210" height="210" viewBox="0 0 240 240" fill="none">
+                <circle cx="120" cy="120" r="105" fill="#f472b6"/>
+                <ellipse cx="115" cy="140" rx="35" ry="25" fill="#ffffff" stroke="#161618" stroke-width="4.5"/>
+                <path d="M95 155 L90 185 L102 185 L105 158" fill="#ffffff" stroke="#161618" stroke-width="4" stroke-linejoin="round"/>
+                <path d="M125 155 L130 185 L142 185 L135 155" fill="#ffffff" stroke="#161618" stroke-width="4" stroke-linejoin="round"/>
+                <circle cx="95" cy="108" r="32" fill="#ffffff" stroke="#161618" stroke-width="4.5"/>
+                <circle cx="85" cy="102" r="3.5" fill="#161618"/>
+                <path d="M78 116 Q85 124 94 116" stroke="#161618" stroke-width="3" stroke-linecap="round"/>
+                <path d="M76 96 C50 65 95 40 115 75 C122 92 108 110 88 104" fill="none" stroke="#facc15" stroke-width="15" stroke-linecap="round"/>
+                <path d="M76 96 C50 65 95 40 115 75 C122 92 108 110 88 104" fill="none" stroke="#ca8a04" stroke-width="2"/>
+                <path d="M84 118 Q72 130 78 150" fill="none" stroke="#161618" stroke-width="3.5" stroke-linecap="round"/>
+                <rect x="74" y="148" width="8" height="12" rx="2" fill="#161618"/>
+                <g transform="rotate(-18 145 110)">
+                  <rect x="110" y="85" width="105" height="52" rx="4" fill="#34d399" stroke="#161618" stroke-width="4.5"/>
+                  <rect x="122" y="93" width="12" height="28" rx="2" fill="#064e3b" stroke="#161618" stroke-width="2"/>
+                  <rect x="144" y="93" width="12" height="28" rx="2" fill="#064e3b" stroke="#161618" stroke-width="2"/>
+                  <rect x="166" y="93" width="12" height="28" rx="2" fill="#064e3b" stroke="#161618" stroke-width="2"/>
+                  <rect x="188" y="93" width="12" height="28" rx="2" fill="#064e3b" stroke="#161618" stroke-width="2"/>
+                  <line x1="114" y1="137" x2="211" y2="137" stroke="#facc15" stroke-width="5" stroke-dasharray="4 2"/>
+                </g>
+              </svg>
+            </div>
 
-            <div class="speech-bubble">
-              Can't remember how to spell my name? Just go to <a href="#" class="pink-link">tania.dev</a>!
+            <div class="comic-bubble">
+              Can't remember how to spell my name? Just go to <a href="#">tania.dev</a>!
             </div>
           </div>
 

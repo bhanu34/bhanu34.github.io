@@ -5,12 +5,401 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>tania.dev</title>
   
-  <!-- Tania's Exact Typography Stack -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
 
-  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* ================= EXACT CSS VARIABLES FROM REPO ================= */
+    :root {
+      --font-system: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      --font-mono: "JetBrains Mono", "SF Mono", Monaco, Menlo, Consolas, monospace;
+
+      --bg-page: #19191c;
+      --bg-sidebar: #1d1d1f;
+      --bg-card: #252528;
+      --bg-card-hover: #2e2e32;
+      --border-subtle: #29292e;
+      --border-divider: #28282c;
+      --text-white: #ffffff;
+      --text-body: #e4e4e7;
+      --text-muted: #95959e;
+      --accent-pink: #ea5b80;
+      --accent-pink-hover: #f77093;
+      --top-red: #d32f2f;
+      --bubble-bg: #212124;
+    }
+
+    [data-theme="light"] {
+      --bg-page: #ffffff;
+      --bg-sidebar: #f8f9fa;
+      --bg-card: #f1f3f5;
+      --bg-card-hover: #e9ecef;
+      --border-subtle: #e9ecef;
+      --border-divider: #dee2e6;
+      --text-white: #111827;
+      --text-body: #374151;
+      --text-muted: #6b7280;
+      --accent-pink: #d6336c;
+      --accent-pink-hover: #e03131;
+      --bubble-bg: #f8f9fa;
+    }
+
+    /* ================= RESET & CORE STYLES ================= */
+    *, *::before, *::after {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: var(--font-system);
+      background-color: var(--bg-page) !important;
+      color: var(--text-body) !important;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* Top Red Line */
+    .top-accent-bar {
+      height: 3px;
+      background-color: var(--top-red);
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10000;
+    }
+
+    /* Layout Shell */
+    .site-container {
+      display: flex;
+      min-height: 100vh;
+      padding-top: 3px;
+    }
+
+    /* Links & Accents */
+    a {
+      color: inherit;
+      text-decoration: none;
+    }
+
+    .pink-link,
+    .timeline-desc a,
+    .section-content a,
+    .sidebar-card a,
+    .comic-bubble a {
+      color: var(--accent-pink) !important;
+      text-decoration: underline !important;
+      text-underline-offset: 3px;
+      font-weight: inherit;
+      transition: color 0.15s ease;
+    }
+
+    .pink-link:hover,
+    .timeline-desc a:hover,
+    .section-content a:hover,
+    .sidebar-card a:hover,
+    .comic-bubble a:hover {
+      color: var(--accent-pink-hover) !important;
+    }
+
+    /* ================= STICKY SIDEBAR ================= */
+    .sidebar {
+      width: 260px;
+      min-width: 260px;
+      background-color: var(--bg-sidebar);
+      border-right: 1px solid var(--border-divider);
+      padding: 1.5rem 1.25rem 2.5rem 1.25rem;
+      display: flex;
+      flex-direction: column;
+      gap: 1.55rem;
+      flex-shrink: 0;
+      position: sticky;
+      top: 3px;
+      height: calc(100vh - 3px);
+      overflow-y: auto;
+    }
+
+    .sidebar-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      font-family: var(--font-mono);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--text-white);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    .header-tools {
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+    }
+
+    .pink-dot {
+      width: 10px;
+      height: 10px;
+      background-color: var(--accent-pink);
+      border-radius: 50%;
+      display: inline-block;
+    }
+
+    .theme-toggle {
+      background: transparent;
+      border: none;
+      color: var(--text-muted);
+      cursor: pointer;
+      display: inline-flex;
+      align-items: center;
+      padding: 0;
+      transition: color 0.15s ease;
+    }
+
+    .theme-toggle:hover {
+      color: var(--text-white);
+    }
+
+    .sidebar-section {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .section-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      color: var(--text-white);
+    }
+
+    .section-content {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+
+    .sidebar-nav {
+      display: flex;
+      flex-direction: column;
+      gap: 0.35rem;
+    }
+
+    .nav-item {
+      color: var(--text-body);
+      font-size: 0.94rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.65rem;
+      padding: 0.35rem 0.55rem;
+      border-radius: 6px;
+      transition: color 0.15s ease;
+    }
+
+    .nav-item:hover {
+      color: var(--accent-pink);
+    }
+
+    .social-links {
+      display: flex;
+      align-items: center;
+      gap: 0.85rem;
+      margin-top: 0.2rem;
+    }
+
+    .social-links a {
+      color: var(--text-muted);
+      display: inline-flex;
+      align-items: center;
+      transition: color 0.15s ease;
+    }
+
+    .social-links a:hover {
+      color: var(--text-white);
+    }
+
+    .sidebar-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 0.85rem 1rem;
+      font-size: 0.83rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    .card-title {
+      font-size: 0.88rem;
+      font-weight: 700;
+      color: var(--text-white);
+      margin-bottom: 0.35rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    /* ================= MAIN CONTENT ================= */
+    .main-content {
+      flex: 1;
+      padding: 3.5rem 3.5rem 6rem 3.5rem;
+      display: flex;
+      justify-content: flex-start;
+      background-color: var(--bg-page);
+    }
+
+    .content-wrapper {
+      max-width: 950px;
+      width: 100%;
+    }
+
+    .hero-layout {
+      display: grid;
+      grid-template-columns: 1fr 260px;
+      gap: 3.5rem;
+      align-items: start;
+    }
+
+    .hero-title {
+      font-size: 2.75rem;
+      font-weight: 800;
+      letter-spacing: -0.04em;
+      color: var(--text-white);
+      line-height: 1.1;
+      margin-bottom: 0.6rem;
+    }
+
+    .hero-subtitle {
+      font-size: 1.15rem;
+      font-weight: 500;
+      color: var(--text-body);
+      margin-bottom: 2.25rem;
+    }
+
+    .timeline-heading {
+      font-size: 1.15rem;
+      font-weight: 700;
+      color: var(--text-white);
+      margin-bottom: 1.25rem;
+    }
+
+    .timeline-list {
+      display: flex;
+      flex-direction: column;
+      gap: 1.4rem;
+    }
+
+    .timeline-row {
+      display: grid;
+      grid-template-columns: 90px 1fr;
+      gap: 1.2rem;
+      align-items: baseline;
+      font-size: 0.95rem;
+    }
+
+    .timeline-year {
+      font-family: var(--font-mono);
+      font-size: 0.82rem;
+      color: var(--text-muted);
+    }
+
+    .timeline-desc {
+      color: var(--text-body);
+      line-height: 1.55;
+    }
+
+    .timeline-footer {
+      margin-top: 2.25rem;
+      font-size: 0.95rem;
+      line-height: 1.6;
+      color: var(--text-body);
+    }
+
+    /* Mascot Column */
+    .mascot-column {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.85rem;
+      margin-top: -0.25rem;
+    }
+
+    .mascot-img-wrap {
+      width: 220px;
+      height: 220px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mascot-img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+    }
+
+    .comic-bubble {
+      background-color: var(--bubble-bg);
+      border: 1px solid var(--border-subtle);
+      border-radius: 8px;
+      padding: 0.75rem 1rem;
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      text-align: center;
+      position: relative;
+      width: 220px;
+      line-height: 1.45;
+    }
+
+    .comic-bubble::before {
+      content: '';
+      position: absolute;
+      top: -6px;
+      left: 50%;
+      transform: translateX(-50%) rotate(45deg);
+      width: 10px;
+      height: 10px;
+      background-color: var(--bubble-bg);
+      border-left: 1px solid var(--border-subtle);
+      border-top: 1px solid var(--border-subtle);
+    }
+
+    /* ================= RESPONSIVENESS ================= */
+    @media (max-width: 920px) {
+      .site-container {
+        flex-direction: column;
+      }
+      .sidebar {
+        width: 100%;
+        min-width: 100%;
+        position: static;
+        height: auto;
+        border-right: none;
+        border-bottom: 1px solid var(--border-divider);
+      }
+      .hero-layout {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+      }
+      .mascot-column {
+        align-items: flex-start;
+      }
+      .main-content {
+        padding: 2rem 1.25rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
@@ -23,7 +412,9 @@
     <aside class="sidebar">
       <div class="sidebar-header">
         <a href="/" class="brand">
-          <span class="icon">💾</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#a5b4fc">
+            <path d="M19 2H5C3.89 2 3 2.89 3 4V20C3 21.11 3.89 22 5 22H19C20.11 22 21 21.11 21 20V6L19 2ZM12 4C13.11 4 14 4.89 14 6C14 7.11 13.11 8 12 8C10.89 8 10 7.11 10 6C10 4.89 10.89 4 12 4ZM17 20H7V13H17V20Z"/>
+          </svg>
           <span class="brand-text">tania.dev</span>
         </a>
         <div class="header-tools">
@@ -53,15 +444,31 @@
 
       <nav class="sidebar-nav">
         <a href="#blog" class="nav-item">
-          <span class="nav-icon">📝</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <rect x="5" y="3" width="15" height="18" rx="2" fill="#fed7aa" stroke="#9a3412" stroke-width="1.5"/>
+            <line x1="3" y1="6" x2="7" y2="6" stroke="#9a3412" stroke-width="2" stroke-linecap="round"/>
+            <line x1="3" y1="10" x2="7" y2="10" stroke="#9a3412" stroke-width="2" stroke-linecap="round"/>
+            <line x1="3" y1="14" x2="7" y2="14" stroke="#9a3412" stroke-width="2" stroke-linecap="round"/>
+            <line x1="3" y1="18" x2="7" y2="18" stroke="#9a3412" stroke-width="2" stroke-linecap="round"/>
+          </svg>
           <span>Blog</span>
         </a>
         <a href="#projects" class="nav-item">
-          <span class="nav-icon">💻</span>
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
+            <rect x="3" y="4" width="18" height="16" rx="2" fill="#334155" stroke="#64748b" stroke-width="1.5"/>
+            <line x1="3" y1="9" x2="21" y2="9" stroke="#64748b" stroke-width="1.5"/>
+            <circle cx="6" cy="6.5" r="1" fill="#f87171"/>
+            <circle cx="9" cy="6.5" r="1" fill="#fbbf24"/>
+            <circle cx="12" cy="6.5" r="1" fill="#4ade80"/>
+            <line x1="6" y1="13" x2="10" y2="13" stroke="#38bdf8" stroke-width="1.5" stroke-linecap="round"/>
+            <line x1="6" y1="16" x2="14" y2="16" stroke="#e2e8f0" stroke-width="1.5" stroke-linecap="round"/>
+          </svg>
           <span>Projects</span>
         </a>
-        <a href="#about" class="nav-item active">
-          <span class="nav-icon">💾</span>
+        <a href="#about" class="nav-item">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="#a5b4fc">
+            <path d="M19 2H5C3.89 2 3 2.89 3 4V20C3 21.11 3.89 22 5 22H19C20.11 22 21 21.11 21 20V6L19 2ZM12 4C13.11 4 14 4.89 14 6C14 7.11 13.11 8 12 8C10.89 8 10 7.11 10 6C10 4.89 10.89 4 12 4ZM17 20H7V13H17V20Z"/>
+          </svg>
           <span>About Me</span>
         </a>
       </nav>
@@ -89,7 +496,12 @@
       <!-- Sidebar Card: New Moon -->
       <div class="sidebar-card">
         <div class="card-title">
-          <span class="card-icon">🌘</span> New Moon Theme
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fcd34d" stroke-width="1.8">
+            <circle cx="12" cy="12" r="8"/>
+            <path d="M4.5 9.5C8 8.5 16 8.5 19.5 9.5"/>
+            <path d="M4.5 14.5C8 15.5 16 15.5 19.5 14.5"/>
+          </svg>
+          New Moon Theme
         </div>
         <p class="card-text">
           I use and maintain <a href="https://taniarascia.github.io/new-moon/" class="pink-link">New Moon</a>, a dark theme for <a href="https://marketplace.visualstudio.com/items?itemName=taniarascia.new-moon-vscode" class="pink-link">Visual Studio Code</a>.
@@ -99,7 +511,11 @@
       <!-- Sidebar Card: Mac Guide -->
       <div class="sidebar-card">
         <div class="card-title">
-          <span class="card-icon">🍎</span> Setting Up a Mac?
+          <svg width="16" height="16" viewBox="0 0 170 170" fill="none">
+            <path d="M150.37 130.25c-2.45 5.66-5.35 10.87-8.71 15.66-4.58 6.53-8.33 11.05-11.22 13.56-4.48 4.12-9.28 6.23-14.42 6.35-3.69 0-8.14-1.05-13.32-3.18-5.19-2.12-9.97-3.17-14.34-3.17-4.58 0-9.49 1.05-14.74 3.17-5.26 2.13-9.5 3.24-12.74 3.35-4.34.13-9.16-1.9-14.49-6.08-3.48-2.82-7.46-7.53-11.94-14.13-6.52-9.68-11.66-20.73-15.42-33.15-3.76-12.42-5.64-24.32-5.64-35.7 0-14.34 3.63-26.33 10.9-35.98 7.27-9.65 16.5-14.61 27.69-14.88 4.58 0 9.87 1.25 15.86 3.75 5.99 2.5 9.77 3.82 11.34 3.96 1.45-.14 5.43-1.53 11.94-4.17 6.51-2.64 12.02-3.82 16.53-3.55 12.87.66 23.01 5.39 30.43 14.2-11.23 6.84-16.71 16.29-16.45 28.34.26 9.47 3.89 17.47 10.89 24 7 6.53 15.34 10.15 25.02 10.86-2.11 6.58-4.7 13.08-7.79 19.51z" fill="#4ade80"/>
+            <path d="M119.22 31.84c0-7.39 2.65-14.28 7.95-20.67 5.3-6.39 11.75-10.23 19.34-11.53.53 7.64-2.02 14.54-7.65 20.7-5.63 6.16-12.18 10-19.64 11.5z" fill="#fbbf24"/>
+          </svg>
+          Setting Up a Mac?
         </div>
         <p class="card-text">
           Read my guide to <a href="https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/" class="pink-link">setting up a Mac for development</a>.
@@ -156,7 +572,7 @@
 
           <!-- Mascot Column -->
           <div class="mascot-column">
-            <!-- Tania's Exact Mascot Artwork from her Repo -->
+            <!-- Official SVG Asset from Tania's Repo -->
             <div class="mascot-img-wrap">
               <img 
                 src="https://raw.githubusercontent.com/taniarascia/taniarascia.com/master/src/assets/tania-ram.svg" 
@@ -179,7 +595,6 @@
   </div>
 
   <script>
-    // Exact theme toggle logic from Tania's Gatsby theme hook
     const themeBtn = document.getElementById('theme-toggle');
     themeBtn.addEventListener('click', () => {
       const isDark = document.documentElement.getAttribute('data-theme') === 'dark';

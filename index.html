@@ -4,100 +4,111 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Your Name – Software Developer & Writer</title>
+  
+  <!-- Inter Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+  
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
-  <!-- Navigation Bar -->
   <header class="site-header">
-    <div class="container nav-container">
+    <div class="container nav-wrapper">
       <a href="/" class="site-logo">Your Name</a>
       <nav class="site-nav">
-        <a href="#about">About</a>
-        <a href="#blog">Blog</a>
-        <a href="#projects">Projects</a>
-        <button id="theme-toggle" class="theme-toggle" aria-label="Toggle dark mode">🌙</button>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#blog" class="nav-link">Blog</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <button id="theme-toggle" class="theme-toggle-btn" aria-label="Toggle dark mode">
+          <svg class="sun-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"></circle><line x1="12" y1="1" x2="12" y2="3"></line><line x1="12" y1="21" x2="12" y2="23"></line><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line><line x1="1" y1="12" x2="3" y2="12"></line><line x1="21" y1="12" x2="23" y2="12"></line><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line></svg>
+          <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor" stroke="none"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path></svg>
+        </button>
       </nav>
     </div>
   </header>
 
   <main class="container">
-    <!-- Hero / Intro -->
-    <section class="hero-section">
-      <h1>Hey, I'm Your Name</h1>
-      <p class="hero-subtext">
+    <!-- Hero Header -->
+    <section class="hero">
+      <h1 class="hero-title">Hey, I'm Your Name</h1>
+      <p class="hero-desc">
         I'm a software engineer and writer based in [Your City]. I write guides about web development, open-source projects, and personal workflows.
       </p>
     </section>
 
     <!-- Latest Articles -->
-    <section id="blog" class="content-section">
-      <div class="section-header">
-        <h2>Latest Articles</h2>
-        <a href="#" class="view-all">View all &rarr;</a>
+    <section id="blog" class="section-block">
+      <div class="section-top">
+        <h2 class="section-heading">Latest Articles</h2>
+        <a href="#" class="section-link">View all &rarr;</a>
       </div>
-      
-      <div class="article-list">
-        <a href="#" class="article-item">
-          <div class="article-info">
-            <span class="article-title">Understanding CSS Grid and Modern Layouts</span>
-            <span class="article-tag">CSS</span>
+
+      <div class="article-group">
+        <a href="#" class="article-card">
+          <div class="article-left">
+            <span class="article-name">Understanding CSS Grid and Modern Layouts</span>
+            <span class="badge">CSS</span>
           </div>
-          <time datetime="2026-08-10">Aug 10, 2026</time>
+          <time class="article-date">Aug 10, 2026</time>
         </a>
 
-        <a href="#" class="article-item">
-          <div class="article-info">
-            <span class="article-title">Building a Minimal Static Site from Scratch</span>
-            <span class="article-tag">Guides</span>
+        <a href="#" class="article-card">
+          <div class="article-left">
+            <span class="article-name">Building a Minimal Static Site from Scratch</span>
+            <span class="badge">Guides</span>
           </div>
-          <time datetime="2026-07-28">Jul 28, 2026</time>
+          <time class="article-date">Jul 28, 2026</time>
         </a>
 
-        <a href="#" class="article-item">
-          <div class="article-info">
-            <span class="article-title">A Practical Introduction to TypeScript Generics</span>
-            <span class="article-tag">TypeScript</span>
+        <a href="#" class="article-card">
+          <div class="article-left">
+            <span class="article-name">A Practical Introduction to TypeScript Generics</span>
+            <span class="badge">TypeScript</span>
           </div>
-          <time datetime="2026-06-15">Jun 15, 2026</time>
+          <time class="article-date">Jun 15, 2026</time>
         </a>
       </div>
     </section>
 
-    <!-- Projects Section -->
-    <section id="projects" class="content-section">
-      <div class="section-header">
-        <h2>Selected Projects</h2>
-        <a href="#" class="view-all">View all &rarr;</a>
+    <!-- Selected Projects -->
+    <section id="projects" class="section-block">
+      <div class="section-top">
+        <h2 class="section-heading">Selected Projects</h2>
+        <a href="#" class="section-link">View all &rarr;</a>
       </div>
 
-      <div class="projects-grid">
-        <div class="project-card">
-          <h3><a href="#">Project Alpha</a></h3>
-          <p>A fast, zero-dependency Markdown parser built with modern JavaScript.</p>
-          <div class="project-meta">
-            <span class="project-stars">★ 1.2k</span>
-            <a href="#" class="project-link">GitHub &rarr;</a>
+      <div class="project-grid">
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title"><a href="#">Project Alpha</a></h3>
+            <p class="card-text">A fast, zero-dependency Markdown parser built with modern JavaScript.</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-stat">★ 1.2k</span>
+            <a href="#" class="card-link">GitHub &rarr;</a>
           </div>
         </div>
 
-        <div class="project-card">
-          <h3><a href="#">Minimal Theme</a></h3>
-          <p>A lightweight, typography-driven static site template for developers.</p>
-          <div class="project-meta">
-            <span class="project-stars">★ 850</span>
-            <a href="#" class="project-link">GitHub &rarr;</a>
+        <div class="card">
+          <div class="card-body">
+            <h3 class="card-title"><a href="#">Minimal Theme</a></h3>
+            <p class="card-text">A lightweight, typography-driven static site template for developers.</p>
+          </div>
+          <div class="card-footer">
+            <span class="card-stat">★ 850</span>
+            <a href="#" class="card-link">GitHub &rarr;</a>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Footer -->
   <footer class="site-footer">
-    <div class="container footer-container">
-      <p>&copy; 2026 Your Name</p>
-      <div class="footer-links">
+    <div class="container footer-wrapper">
+      <span class="footer-copy">&copy; 2026 Your Name</span>
+      <div class="footer-nav">
         <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
         <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
         <a href="/rss.xml">RSS</a>
@@ -106,20 +117,17 @@
   </footer>
 
   <script>
-    const toggle = document.getElementById('theme-toggle');
+    const themeBtn = document.getElementById('theme-toggle');
     const prefersDark = window.matchMedia('(prefers-color-scheme: dark)');
-    
-    // Load saved or system theme
-    const currentTheme = localStorage.getItem('theme') || (prefersDark.matches ? 'dark' : 'light');
-    document.documentElement.setAttribute('data-theme', currentTheme);
-    toggle.textContent = currentTheme === 'dark' ? '☀️' : '🌙';
+    const savedTheme = localStorage.getItem('theme') || (prefersDark.matches ? 'dark' : 'light');
 
-    toggle.addEventListener('click', () => {
+    document.documentElement.setAttribute('data-theme', savedTheme);
+
+    themeBtn.addEventListener('click', () => {
       const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
-      const newTheme = isDark ? 'light' : 'dark';
-      document.documentElement.setAttribute('data-theme', newTheme);
-      localStorage.setItem('theme', newTheme);
-      toggle.textContent = newTheme === 'dark' ? '☀️' : '🌙';
+      const targetTheme = isDark ? 'light' : 'dark';
+      document.documentElement.setAttribute('data-theme', targetTheme);
+      localStorage.setItem('theme', targetTheme);
     });
   </script>
 </body>

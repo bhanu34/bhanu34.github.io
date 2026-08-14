@@ -4,12 +4,12 @@
   --font-mono: "JetBrains Mono", "SF Mono", Monaco, Menlo, Consolas, monospace;
 
   /* Dark theme colors (default) */
-  --bg-page: #18181a;
+  --bg-page: #19191c;
   --bg-sidebar: #1d1d1f;
   --bg-card: #252528;
-  --bg-card-hover: #2d2d31;
+  --bg-card-hover: #2e2e32;
   --border-subtle: #29292e;
-  --border-divider: #26262a;
+  --border-divider: #28282c;
   --text-white: #ffffff;
   --text-body: #e4e4e7;
   --text-muted: #95959e;
@@ -41,17 +41,20 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: var(--font-system);
-  background-color: var(--bg-page);
-  color: var(--text-body);
+  background-color: var(--bg-page) !important;
+  color: var(--text-body) !important;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  transition: background-color 0.15s ease, color 0.15s ease;
 }
 
-/* Top Accent Line */
+/* Top Red Accent Bar */
 .top-accent-bar {
   height: 3px;
   background-color: var(--top-red);
@@ -75,7 +78,11 @@ a {
   text-decoration: none;
 }
 
-.pink-link {
+.pink-link,
+.timeline-desc a,
+.section-content a,
+.sidebar-card a,
+.comic-bubble a {
   color: var(--accent-pink) !important;
   text-decoration: underline !important;
   text-underline-offset: 3px;
@@ -83,7 +90,11 @@ a {
   transition: color 0.15s ease;
 }
 
-.pink-link:hover {
+.pink-link:hover,
+.timeline-desc a:hover,
+.section-content a:hover,
+.sidebar-card a:hover,
+.comic-bubble a:hover {
   color: var(--accent-pink-hover) !important;
 }
 
@@ -183,7 +194,7 @@ a {
   gap: 0.65rem;
   padding: 0.35rem 0.55rem;
   border-radius: 6px;
-  transition: color 0.15s ease, background-color 0.15s ease;
+  transition: color 0.15s ease;
 }
 
 .nav-item:hover {

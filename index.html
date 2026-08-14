@@ -1,11 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Bhanu Pratap Reddy – Senior Software Engineer</title>
+  <title>tania.dev</title>
   
-  <!-- Fonts -->
+  <!-- Tania's Exact Typography Stack -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
@@ -14,280 +14,161 @@
 </head>
 <body>
 
-  <!-- Top Red Accent Stripe -->
-  <div class="top-accent-line"></div>
+  <!-- Top Accent Bar -->
+  <div class="top-accent-bar"></div>
 
-  <div class="site-wrapper">
+  <div class="site-container">
     
-    <!-- STICKY LEFT SIDEBAR -->
+    <!-- LEFT SIDEBAR -->
     <aside class="sidebar">
-      <div class="sidebar-top">
-        <a href="#about" class="brand-title">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="#a5b4fc">
-            <path d="M19 2H5C3.89 2 3 2.89 3 4V20C3 21.11 3.89 22 5 22H19C20.11 22 21 21.11 21 20V6L19 2ZM12 4C13.11 4 14 4.89 14 6C14 7.11 13.11 8 12 8C10.89 8 10 7.11 10 6C10 4.89 10.89 4 12 4ZM17 20H7V13H17V20Z"/>
-          </svg>
-          bhanu.dev
+      <div class="sidebar-header">
+        <a href="/" class="brand">
+          <span class="icon">💾</span>
+          <span class="brand-text">tania.dev</span>
         </a>
+        <div class="header-tools">
+          <span class="pink-dot"></span>
+          <button id="theme-toggle" class="theme-toggle" aria-label="Toggle theme">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+          </button>
+        </div>
       </div>
 
-      <div class="sidebar-group">
-        <h4 class="sidebar-heading">About Me</h4>
-        <p class="sidebar-bio">
-          I'm <a href="#about" class="pink-link">Bhanu</a>, a software engineer architecting backend infrastructure, distributed systems, and cloud pipelines. 💻
+      <div class="sidebar-section">
+        <h4 class="section-title">About Me</h4>
+        <p class="section-content">
+          I'm <a href="https://www.taniarascia.com/me" class="pink-link">Tania</a>, software engineer and open-source creator. This is my digital garden. 🌱
         </p>
       </div>
 
-      <!-- Navigation Links -->
       <nav class="sidebar-nav">
-        <a href="#about" class="nav-entry active">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="#a5b4fc">
-            <path d="M19 2H5C3.89 2 3 2.89 3 4V20C3 21.11 3.89 22 5 22H19C20.11 22 21 21.11 21 20V6L19 2ZM12 4C13.11 4 14 4.89 14 6C14 7.11 13.11 8 12 8C10.89 8 10 7.11 10 6C10 4.89 10.89 4 12 4ZM17 20H7V13H17V20Z"/>
-          </svg>
-          Experience & Bio
+        <a href="#blog" class="nav-item">
+          <span class="nav-icon">📝</span>
+          <span>Blog</span>
         </a>
-
-        <a href="#skills" class="nav-entry">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#fed7aa" stroke-width="2">
-            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"/>
-            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"/>
-          </svg>
-          Tech Stack
+        <a href="#projects" class="nav-item">
+          <span class="nav-icon">💻</span>
+          <span>Projects</span>
         </a>
-
-        <a href="#projects" class="nav-entry">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none">
-            <rect x="3" y="4" width="18" height="16" rx="2" fill="#334155" stroke="#64748b" stroke-width="1.5"/>
-            <line x1="3" y1="9" x2="21" y2="9" stroke="#64748b" stroke-width="1.5"/>
-            <circle cx="6" cy="6.5" r="1" fill="#f87171"/>
-            <circle cx="9" cy="6.5" r="1" fill="#fbbf24"/>
-            <circle cx="12" cy="6.5" r="1" fill="#4ade80"/>
-            <line x1="6" y1="13" x2="10" y2="13" stroke="#38bdf8" stroke-width="1.5" stroke-linecap="round"/>
-            <line x1="6" y1="16" x2="14" y2="16" stroke="#e2e8f0" stroke-width="1.5" stroke-linecap="round"/>
-          </svg>
-          Key Projects
-        </a>
-
-        <a href="#education" class="nav-entry">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#93c5fd" stroke-width="2">
-            <path d="M22 10v6M2 10l10-5 10 5-10 5z"/>
-            <path d="M6 12v5c3 3 9 3 12 0v-5"/>
-          </svg>
-          Education
+        <a href="#about" class="nav-item active">
+          <span class="nav-icon">💾</span>
+          <span>About Me</span>
         </a>
       </nav>
 
-      <div class="sidebar-group">
-        <h4 class="sidebar-heading">Stay Connected</h4>
-        <div class="social-row">
-          <a href="mailto:your-email@example.com" aria-label="Email">
+      <div class="sidebar-section">
+        <h4 class="section-title">Stay Connected</h4>
+        <div class="social-links">
+          <a href="mailto:hello@taniarascia.com" aria-label="Email">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
           </a>
-          <a href="https://github.com" target="_blank" rel="noopener" aria-label="GitHub">
+          <a href="https://github.com/taniarascia" target="_blank" rel="noopener" aria-label="GitHub">
             <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.37 0 0 5.37 0 12c0 5.31 3.435 9.795 8.205 11.385.6.105.825-.255.825-.57 0-.285-.015-1.23-.015-2.235-3.015.555-3.795-.735-4.035-1.41-.135-.345-.72-1.41-1.23-1.695-.42-.225-1.02-.78-.015-.795.945-.015 1.62.87 1.845 1.23 1.08 1.815 2.805 1.305 3.495.99.105-.78.42-1.305.765-1.605-2.67-.3-5.46-1.335-5.46-5.925 0-1.305.465-2.385 1.23-3.225-.12-.3-.54-1.53.12-3.18 0 0 1.005-.315 3.3 1.23.96-.27 1.98-.405 3-.405s2.04.135 3 .405c2.295-1.56 3.3-1.23 3.3-1.23.66 1.65.24 2.88.12 3.18.765.84 1.23 1.905 1.23 3.225 0 4.605-2.805 5.625-5.475 5.925.435.375.81 1.095.81 2.22 0 1.605-.015 2.895-.015 3.3 0 .315.225.69.825.57A12.02 12.02 0 0024 12c0-6.63-5.37-12-12-12z"/></svg>
           </a>
-          <a href="https://linkedin.com" target="_blank" rel="noopener" aria-label="LinkedIn">
-            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"/></svg>
+          <a href="https://bsky.app" aria-label="Bluesky">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 10.8c-1.087-2.114-4.046-6.053-6.798-7.995C2.566 1.01 0 1.875 0 5.48c0 4.195 2.06 14.155 12 18.52 9.94-4.365 12-14.325 12-18.52 0-3.605-2.566-4.47-5.202-2.675C16.046 4.747 13.087 8.686 12 10.8z"/>
+            </svg>
+          </a>
+          <a href="/rss.xml" aria-label="RSS Feed">
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 11a9 9 0 0 1 9 9"></path><path d="M4 4a16 16 0 0 1 16 16"></path><circle cx="5" cy="19" r="1"></circle></svg>
           </a>
         </div>
       </div>
 
-      <div class="card-widget">
-        <div class="card-widget-title">
-          <span>⚡</span> Currently Building
+      <!-- Sidebar Card: New Moon -->
+      <div class="sidebar-card">
+        <div class="card-title">
+          <span class="card-icon">🌘</span> New Moon Theme
         </div>
-        <p>Architecting low-latency microservices, telemetry dashboards, and cloud-native backends.</p>
+        <p class="card-text">
+          I use and maintain <a href="https://taniarascia.github.io/new-moon/" class="pink-link">New Moon</a>, a dark theme for <a href="https://marketplace.visualstudio.com/items?itemName=taniarascia.new-moon-vscode" class="pink-link">Visual Studio Code</a>.
+        </p>
+      </div>
+
+      <!-- Sidebar Card: Mac Guide -->
+      <div class="sidebar-card">
+        <div class="card-title">
+          <span class="card-icon">🍎</span> Setting Up a Mac?
+        </div>
+        <p class="card-text">
+          Read my guide to <a href="https://www.taniarascia.com/setting-up-a-brand-new-mac-for-development/" class="pink-link">setting up a Mac for development</a>.
+        </p>
       </div>
     </aside>
 
     <!-- MAIN RIGHT CONTENT -->
-    <main class="main-canvas">
-      <div class="canvas-inner">
+    <main class="main-content">
+      <div class="content-wrapper">
         
-        <!-- SECTION 1: HERO & CAREER TIMELINE -->
-        <section id="about" class="page-section">
-          <div class="hero-layout">
-            <div>
-              <h1 class="hero-h1">Hey, I'm Bhanu!</h1>
-              <p class="hero-sub">Senior Software Engineer & Systems Architect.</p>
+        <section class="hero-layout">
+          <!-- Text Area -->
+          <div class="hero-body">
+            <h1 class="hero-title">Hey, I'm Tania!</h1>
+            <p class="hero-subtitle">Principal software engineer, writer, all-around nerd.</p>
+            
+            <h3 class="timeline-heading">A brief timeline</h3>
+
+            <div class="timeline-list">
               
-              <h3 class="timeline-title">Career Timeline</h3>
-
-              <div class="timeline-list">
-                <div class="timeline-item">
-                  <span class="timeline-year">2023–now</span>
-                  <span class="timeline-detail">
-                    <strong class="pink-link">Senior Software Engineer</strong>: Designing resilient distributed systems, reducing database query latencies by 40%, and leading core platform architecture.
-                  </span>
-                </div>
-
-                <div class="timeline-item">
-                  <span class="timeline-year">2020–2023</span>
-                  <span class="timeline-detail">
-                    <strong class="pink-link">Software Engineer</strong>: Engineered event-driven workflows with Kafka and Redis, built high-throughput REST/gRPC microservices, and containerized deployment pipelines.
-                  </span>
-                </div>
-
-                <div class="timeline-item">
-                  <span class="timeline-year">2017–2020</span>
-                  <span class="timeline-detail">
-                    <strong class="pink-link">Associate Engineer</strong>: Built full-stack features with Java, Spring Boot, and TypeScript. Optimized SQL indices and payment gateway integrations.
-                  </span>
-                </div>
-
-                <div class="timeline-item">
-                  <span class="timeline-year">2013–2017</span>
-                  <span class="timeline-detail">
-                    <strong class="pink-link">B.Tech in Computer Science</strong>: Specialized in Algorithms, Operating Systems, Database Management, and Networking.
-                  </span>
-                </div>
+              <div class="timeline-row">
+                <span class="timeline-year">1998–2006</span>
+                <span class="timeline-desc">Geocities kid, forum-goer, gamer, lover of obscure '80s bands.</span>
               </div>
 
-              <div class="timeline-extra">
-                <strong class="pink-link">Core Focus</strong>: High concurrency, system observability, cloud infrastructure, clean code architecture.
+              <div class="timeline-row">
+                <span class="timeline-year">2007–2014</span>
+                <span class="timeline-desc">
+                  <a href="#" class="pink-link">Professional chef</a>: Culinary degree, 60–hour weeks in Chicago kitchens, line cook to chef-manager by 22.
+                </span>
               </div>
+
+              <div class="timeline-row">
+                <span class="timeline-year">2014–2020</span>
+                <span class="timeline-desc">
+                  <a href="#" class="pink-link">Career change</a>: Unpaid intern by day, cook by night, then junior dev to senior engineer. <a href="#" class="pink-link">Wrote everything down</a> along the way.
+                </span>
+              </div>
+
+              <div class="timeline-row">
+                <span class="timeline-year">2021–now</span>
+                <span class="timeline-desc">
+                  <a href="#" class="pink-link">Principal software engineer</a>: Building design systems, setting technical direction, shipping features, and still documenting: <a href="#" class="pink-link">177 posts</a>, <a href="#" class="pink-link">40+ publications</a>, and <a href="#" class="pink-link">20,000+ stars on GitHub</a>.
+                </span>
+              </div>
+
             </div>
 
-            <!-- Profile Photo & Speech Bubble -->
-            <div class="profile-panel">
-              <div class="profile-frame">
-                <!-- Replace 'profile.jpg' with your photo path -->
-                <img src="profile.jpg" alt="Bhanu Pratap Reddy" class="profile-img" onerror="this.style.display='none'; document.getElementById('avatar-fallback').style.display='flex';" />
-                
-                <!-- Fallback Initial Avatar if photo is not yet loaded -->
-                <div id="avatar-fallback" class="avatar-fallback" style="display: none;">
-                  <span>BPR</span>
-                </div>
-              </div>
-
-              <div class="comic-bubble">
-                Need my resume or portfolio details? Explore <a href="#" class="pink-link">bhanu.dev</a>!
-              </div>
+            <div class="timeline-footer">
+              <a href="#" class="pink-link">Also</a>: city explorer, weight-lifter, brick-clicker, accordion enthusiast, biker, Magic gatherer, webmaster.
             </div>
           </div>
-        </section>
 
-        <!-- SECTION 2: TECH STACK -->
-        <section id="skills" class="page-section">
-          <div class="section-title-wrap">
-            <h2 class="section-heading">Technical Skills & Tooling</h2>
-          </div>
-
-          <div class="skills-grid">
-            <div class="skill-card">
-              <div class="skill-group-title">Languages</div>
-              <div class="skill-badges">
-                <span class="skill-badge">Java</span>
-                <span class="skill-badge">TypeScript</span>
-                <span class="skill-badge">Go</span>
-                <span class="skill-badge">Python</span>
-                <span class="skill-badge">SQL</span>
-              </div>
+          <!-- Mascot Column -->
+          <div class="mascot-column">
+            <!-- Tania's Exact Mascot Artwork from her Repo -->
+            <div class="mascot-img-wrap">
+              <img 
+                src="https://raw.githubusercontent.com/taniarascia/taniarascia.com/master/src/assets/tania-ram.svg" 
+                alt="Tania Ram Mascot" 
+                width="220" 
+                height="220" 
+                class="mascot-img"
+              />
             </div>
 
-            <div class="skill-card">
-              <div class="skill-group-title">Backend & Microservices</div>
-              <div class="skill-badges">
-                <span class="skill-badge">Spring Boot</span>
-                <span class="skill-badge">Node.js</span>
-                <span class="skill-badge">gRPC</span>
-                <span class="skill-badge">Kafka</span>
-                <span class="skill-badge">GraphQL</span>
-              </div>
-            </div>
-
-            <div class="skill-card">
-              <div class="skill-group-title">Databases & Storage</div>
-              <div class="skill-badges">
-                <span class="skill-badge">PostgreSQL</span>
-                <span class="skill-badge">Redis</span>
-                <span class="skill-badge">MySQL</span>
-                <span class="skill-badge">MongoDB</span>
-              </div>
-            </div>
-
-            <div class="skill-card">
-              <div class="skill-group-title">Cloud & Infrastructure</div>
-              <div class="skill-badges">
-                <span class="skill-badge">AWS</span>
-                <span class="skill-badge">Docker</span>
-                <span class="skill-badge">Kubernetes</span>
-                <span class="skill-badge">CI/CD</span>
-                <span class="skill-badge">Grafana</span>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- SECTION 3: KEY PROJECTS -->
-        <section id="projects" class="page-section">
-          <div class="section-title-wrap">
-            <h2 class="section-heading">Featured Engineering Projects</h2>
-          </div>
-
-          <div class="projects-grid">
-            <div class="project-tile">
-              <div class="tile-header">
-                <h3 class="tile-title"><a href="#" class="pink-link">Distributed Task Queue</a></h3>
-                <span class="tile-star">★ 1.4k</span>
-              </div>
-              <p class="tile-desc">Asynchronous background worker engine supporting rate limiting, dead-letter queues, and automatic fault tolerance.</p>
-              <div class="tile-footer">
-                <span class="tech-tag">Go / Redis / Docker</span>
-                <a href="#" class="source-link">GitHub ↗</a>
-              </div>
-            </div>
-
-            <div class="project-tile">
-              <div class="tile-header">
-                <h3 class="tile-title"><a href="#" class="pink-link">Cloud Infrastructure Monitor</a></h3>
-                <span class="tile-star">★ 950</span>
-              </div>
-              <p class="tile-desc">Real-time metrics aggregator streaming CPU, memory, and p99 query latency stats into Grafana dashboards.</p>
-              <div class="tile-footer">
-                <span class="tech-tag">TypeScript / Prometheus</span>
-                <a href="#" class="source-link">GitHub ↗</a>
-              </div>
-            </div>
-
-            <div class="project-tile">
-              <div class="tile-header">
-                <h3 class="tile-title"><a href="#" class="pink-link">Event-Driven Notification Hub</a></h3>
-                <span class="tile-star">★ 680</span>
-              </div>
-              <p class="tile-desc">Multi-channel messaging service using Apache Kafka to orchestrate SMS, push, and transactional email deliveries.</p>
-              <div class="tile-footer">
-                <span class="tech-tag">Node.js / Kafka / PostgreSQL</span>
-                <a href="#" class="source-link">GitHub ↗</a>
-              </div>
-            </div>
-
-            <div class="project-tile">
-              <div class="tile-header">
-                <h3 class="tile-title"><a href="#" class="pink-link">Microservice Boilerplate</a></h3>
-                <span class="tile-star">★ 820</span>
-              </div>
-              <p class="tile-desc">Production template featuring automated GitHub Actions, OpenAPI documentation, and containerization.</p>
-              <div class="tile-footer">
-                <span class="tech-tag">Java / Spring Boot / Docker</span>
-                <a href="#" class="source-link">GitHub ↗</a>
-              </div>
-            </div>
-          </div>
-        </section>
-
-        <!-- SECTION 4: EDUCATION -->
-        <section id="education" class="page-section">
-          <div class="section-title-wrap">
-            <h2 class="section-heading">Education & Certifications</h2>
-          </div>
-
-          <div class="edu-list">
-            <div class="edu-row">
-              <div>
-                <div class="edu-title">Bachelor of Technology (B.Tech) in Computer Science</div>
-                <div class="edu-sub">Core focus: Distributed Systems, Database Architecture & Algorithms</div>
-              </div>
-              <time class="edu-date">2013 – 2017</time>
+            <div class="comic-bubble">
+              Can't remember how to spell my name? Just go to <a href="https://tania.dev" class="pink-link">tania.dev</a>!
             </div>
           </div>
         </section>
@@ -298,24 +179,11 @@
   </div>
 
   <script>
-    const navLinks = document.querySelectorAll('.sidebar-nav .nav-entry');
-    const sections = document.querySelectorAll('.page-section');
-
-    window.addEventListener('scroll', () => {
-      let current = '';
-      sections.forEach(section => {
-        const sectionTop = section.offsetTop - 140;
-        if (pageYOffset >= sectionTop) {
-          current = section.getAttribute('id');
-        }
-      });
-
-      navLinks.forEach(link => {
-        link.classList.remove('active');
-        if (link.getAttribute('href') === `#${current}`) {
-          link.classList.add('active');
-        }
-      });
+    // Exact theme toggle logic from Tania's Gatsby theme hook
+    const themeBtn = document.getElementById('theme-toggle');
+    themeBtn.addEventListener('click', () => {
+      const isDark = document.documentElement.getAttribute('data-theme') === 'dark';
+      document.documentElement.setAttribute('data-theme', isDark ? 'light' : 'dark');
     });
   </script>
 </body>

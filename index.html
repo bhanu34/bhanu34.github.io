@@ -1,127 +1,292 @@
-<!doctype html>
-<html lang="en">
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Bhanu Pratap Reddy</title>
-<meta name="description" content="Bhanu Pratap Reddy — Computational Mechanics Engineer">
-<link rel="stylesheet" href="style.css">
-</head>
-<body>
-<header class="navbar">
-  <a class="brand" href="/">Bhanu Pratap Reddy</a>
-  <nav><a href="#work">Work</a><a href="#notes">Notes</a><a href="#projects">Projects</a><a href="#about">About Me</a></nav>
-  <button id="theme" aria-label="Change theme">Color / Theme</button>
-</header>
+/* --- Variables & Theming --- */
+:root {
+  --bg: #ffffff;
+  --text: #1a1a1a;
+  --text-muted: #666666;
+  --border: #eaeaea;
+  --card-bg: #fafafa;
+  --card-hover: #f0f0f0;
+  --link: #1a1a1a;
+  --link-hover: #0066cc;
+  --tag-bg: #f2f2f2;
+  --tag-text: #555555;
+  --max-width: 760px;
+  --font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+  --font-mono: ui-monospace, SFMono-Regular, "SF Mono", Menlo, Consolas, monospace;
+}
 
-<div class="shell">
-<aside class="sidebar">
-  <section>
-    <h3>About Me</h3>
-    <p>I'm Bhanu, a computational mechanics engineer interested in finite element analysis, numerical simulation, CAE, and scientific computing.</p>
-  </section>
-  <nav class="side-nav">
-    <a href="#work">Work</a>
-    <a href="#notes">Notes</a>
-    <a href="#projects">Projects</a>
-    <a href="#education">Education</a>
-    <a href="#about">About Me</a>
-  </nav>
-  <section>
-    <h3>Stay Connected</h3>
-    <a href="https://github.com/bhanu34" target="_blank">GitHub</a>
-    <a href="#">LinkedIn</a>
-    <a href="mailto:YOUR_EMAIL@example.com">Email</a>
-    <a href="cv.pdf">Resume</a>
-  </section>
-</aside>
+[data-theme="dark"] {
+  --bg: #121212;
+  --text: #e0e0e0;
+  --text-muted: #888888;
+  --border: #262626;
+  --card-bg: #1a1a1a;
+  --card-hover: #222222;
+  --link: #f5f5f5;
+  --link-hover: #58a6ff;
+  --tag-bg: #222222;
+  --tag-text: #aaaaaa;
+}
 
-<main>
-<section class="intro">
-  <h1>Hey, I'm Bhanu!</h1>
-  <p>I'm a computational mechanics engineer working at the intersection of engineering mechanics, finite element analysis, numerical simulation, and computation.</p>
-  <p>This is my digital garden — a place for my professional work, technical notes, projects, and things I learn.</p>
-</section>
+/* --- Reset & Global Defaults --- */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
 
-<section id="work">
-<h2>A brief timeline</h2>
-<div class="timeline">
-  <div><time>2013–2017</time><p><b>B.Tech in Civil Engineering</b><br>JNTU, Hyderabad</p></div>
-  <div><time>2019–2021</time><p><b>M.Tech in Mechanical Engineering</b><br>BITS Pilani, WILP</p></div>
-  <div><time>Professional</time><p><b>Computational / CAE Engineering</b><br>Engineering analysis, simulation and numerical methods.</p></div>
-</div>
-</section>
+body {
+  font-family: var(--font-sans);
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.6;
+  transition: background-color 0.2s ease, color 0.2s ease;
+  -webkit-font-smoothing: antialiased;
+}
 
-<section id="notes">
-<h2>Fundamentals</h2>
-<p class="sub">Engineering concepts and methods I want to document clearly.</p>
-<div class="grid">
-<a href="#"><b>Finite Element Analysis</b><small>FEA fundamentals and modelling</small></a>
-<a href="#"><b>Computational Mechanics</b><small>Mechanics, discretization and simulation</small></a>
-<a href="#"><b>Numerical Methods</b><small>Methods behind engineering computation</small></a>
-<a href="#"><b>CAE Workflows</b><small>From model setup to interpretation</small></a>
-<a href="#"><b>Scientific Computing</b><small>Python and engineering computation</small></a>
-<a href="#"><b>Post-processing</b><small>Turning simulation results into insight</small></a>
-</div>
-</section>
+.container {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
 
-<section>
-<h2>Deep Dives</h2>
-<p class="sub">Long-form technical writing on computational engineering.</p>
-<div class="grid">
-<a href="#"><b>Nonlinear Finite Element Analysis</b><small>Coming soon</small></a>
-<a href="#"><b>Simulation-driven Engineering</b><small>Coming soon</small></a>
-<a href="#"><b>Python for Engineering Automation</b><small>Coming soon</small></a>
-<a href="#"><b>Verification &amp; Validation</b><small>Coming soon</small></a>
-</div>
-</section>
+/* --- Header / Navigation --- */
+.site-header {
+  padding: 2.5rem 0 1.5rem;
+}
 
-<section>
-<h2>Engineering Work</h2>
-<p class="sub">A growing archive of computational and simulation work.</p>
-<div class="grid">
-<a href="#"><b>Finite Element Projects</b><small>Selected analysis work</small></a>
-<a href="#"><b>Automation &amp; Tools</b><small>Engineering scripts and workflows</small></a>
-<a href="#"><b>Numerical Experiments</b><small>Models, methods and results</small></a>
-</div>
-</section>
+.nav-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
 
-<section class="latest">
-<h2>Latest</h2><a class="more" href="#">All Notes →</a>
-<a class="row" href="#"><time>Coming soon</time><b>Why finite element results need engineering judgement</b></a>
-<a class="row" href="#"><time>Coming soon</time><b>Building reliable simulation workflows</b></a>
-<a class="row" href="#"><time>Coming soon</time><b>Python as an engineering analysis tool</b></a>
-</section>
+.site-logo {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--text);
+  text-decoration: none;
+}
 
-<section id="projects">
-<h2>Projects</h2><a class="more" href="#">All Projects →</a>
-<p class="sub">Selected projects and technical work.</p>
-<article class="project"><time>2026</time><div><h3><a href="#">Computational Mechanics Portfolio</a></h3><p>This website and a growing technical archive for FEA, CAE and numerical simulation.</p><a href="https://github.com/bhanu34" target="_blank">Source ↗</a></div></article>
-<article class="project"><time>—</time><div><h3><a href="#">Engineering Automation</a></h3><p>Python-based tools and workflows for repetitive engineering analysis tasks.</p><a href="https://github.com/bhanu34" target="_blank">Source ↗</a></div></article>
-</section>
+.site-nav {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+}
 
-<section id="education">
-<h2>Education</h2>
-<div class="timeline">
-<div><time>2019–2021</time><p><b>M.Tech in Mechanical Engineering</b><br>BITS Pilani, WILP</p></div>
-<div><time>2013–2017</time><p><b>B.Tech in Civil Engineering</b><br>JNTU, Hyderabad</p></div>
-</div>
-</section>
+.site-nav a {
+  color: var(--text-muted);
+  text-decoration: none;
+  font-size: 0.95rem;
+  font-weight: 500;
+  transition: color 0.15s ease;
+}
 
-<section id="about">
-<h2>About Me</h2>
-<p class="sub">My professional background and interests.</p>
-<p>I have an engineering background spanning civil and mechanical engineering, with postgraduate study in mechanical engineering. My interests are computational mechanics, finite element analysis, numerical simulation, CAE, and scientific computing.</p>
-<p>This site is intended to become more than an online résumé: a place where I can publish technical work and build a useful record of what I learn.</p>
-</section>
+.site-nav a:hover {
+  color: var(--text);
+}
 
-<footer>Made by Bhanu Pratap Reddy · GitHub Pages</footer>
-</main>
-</div>
+.theme-toggle {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.1rem;
+  padding: 0.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
 
-<script>
-const b=document.getElementById('theme');
-b.onclick=()=>document.documentElement.classList.toggle('dark');
-</script>
-</body>
-</html>
+/* --- Hero Section --- */
+.hero-section {
+  padding: 3.5rem 0 2.5rem;
+}
+
+.hero-section h1 {
+  font-size: 2.25rem;
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  margin-bottom: 1rem;
+  color: var(--text);
+}
+
+.hero-subtext {
+  font-size: 1.1rem;
+  color: var(--text-muted);
+  max-width: 600px;
+}
+
+/* --- Content Sections --- */
+.content-section {
+  padding: 2rem 0;
+}
+
+.section-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  margin-bottom: 1.25rem;
+}
+
+.section-header h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.view-all {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.view-all:hover {
+  color: var(--link-hover);
+}
+
+/* --- Articles List --- */
+.article-list {
+  display: flex;
+  flex-direction: column;
+}
+
+.article-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--border);
+  text-decoration: none;
+  color: var(--text);
+  transition: opacity 0.15s ease;
+}
+
+.article-item:hover .article-title {
+  color: var(--link-hover);
+}
+
+.article-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.article-title {
+  font-weight: 500;
+  font-size: 1rem;
+}
+
+.article-tag {
+  font-size: 0.75rem;
+  padding: 0.15rem 0.5rem;
+  background-color: var(--tag-bg);
+  color: var(--tag-text);
+  border-radius: 4px;
+  font-family: var(--font-mono);
+}
+
+.article-item time {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+  white-space: nowrap;
+}
+
+/* --- Projects Grid --- */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+}
+
+.project-card {
+  padding: 1.25rem;
+  background-color: var(--card-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: background-color 0.15s ease, border-color 0.15s ease;
+}
+
+.project-card:hover {
+  background-color: var(--card-hover);
+}
+
+.project-card h3 a {
+  font-size: 1.05rem;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.project-card h3 a:hover {
+  color: var(--link-hover);
+}
+
+.project-card p {
+  font-size: 0.9rem;
+  color: var(--text-muted);
+  margin: 0.5rem 0 1rem;
+}
+
+.project-meta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+
+.project-link {
+  text-decoration: none;
+  color: var(--text-muted);
+}
+
+.project-link:hover {
+  color: var(--link-hover);
+}
+
+/* --- Footer --- */
+.site-footer {
+  margin-top: 4rem;
+  padding: 2.5rem 0;
+  border-top: 1px solid var(--border);
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
+  color: var(--text-muted);
+}
+
+.footer-links {
+  display: flex;
+  gap: 1rem;
+}
+
+.footer-links a {
+  color: var(--text-muted);
+  text-decoration: none;
+}
+
+.footer-links a:hover {
+  color: var(--text);
+}
+
+/* --- Mobile Responsiveness --- */
+@media (max-width: 600px) {
+  .article-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.3rem;
+  }
+  
+  .hero-section h1 {
+    font-size: 1.75rem;
+  }
+}
